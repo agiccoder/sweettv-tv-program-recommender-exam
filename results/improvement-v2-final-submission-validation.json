@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "path": "/Users/timur/Recsys/midterm-codex-package/experiments/improvement-v2-01/final/submission.csv",
+  "sha256": "d5060c1949c8a555bc6c607b2ba7f5e93806add1ab7991c9e2a5b9d242537f85",
+  "size_bytes": 76020,
+  "rows": 1260,
+  "expected_users": 1260,
+  "headers": [
+    "user_id",
+    "tv_show_id"
+  ],
+  "user_column": "user_id",
+  "prediction_column": "tv_show_id",
+  "recommendations_per_user": 5,
+  "candidate_count": 6632,
+  "distinct_recommended_programmes": 269,
+  "template_sha256": "d8c209dce3c7c9d815d8e2a6226e1be63052ee7afa7e8ba8b75dc2f703967a02",
+  "selected_method": "improved_ppr_0.25_seconds_sqrt",
+  "selected_from": "early development primary Top5-seconds MAP only",
+  "fit_seconds": 4.16375770800002,
+  "predict_seconds": 9.323966250000012,
+  "full_fit_user_item_pairs": 1164290,
+  "future_view_features": false
+}

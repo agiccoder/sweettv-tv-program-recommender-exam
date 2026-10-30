@@ -1,0 +1,163 @@
+{
+  "protocol_id": "sweettv-improvement-v2",
+  "seed": 20261030,
+  "motivation": "New preferred-Top5 proxy after the original all-observed holdout and reported Kaggle result; this is not an untouched original holdout or a claim about the hidden evaluator.",
+  "development": {
+    "train_start": "2020-03-09T00:00:00",
+    "train_end": "2020-04-13T00:00:00",
+    "target_end": "2020-05-18T00:00:00"
+  },
+  "confirmation": {
+    "train_start": "2020-03-09T00:00:00",
+    "train_end": "2020-05-18T00:00:00",
+    "target_end": "2020-07-27T00:00:00"
+  },
+  "clock": "Original naive source wall-clock coordinates; no inferred timezone conversion",
+  "interaction_threshold_seconds": 120,
+  "repeat_policy": "allow",
+  "candidate_policy": "One common labelled-programme pool from each target window's prepared schedule",
+  "cohort_policy": "Template users with at least one observable eligible held-out programme; identical IDs and order for every method within a block, including cold users",
+  "targets": {
+    "primary": "At most five unique eligible held-out programmes ranked by total accepted overlap seconds descending, then programme ID ascending",
+    "secondary": "At most five unique eligible held-out programmes ranked by total accepted watch counts descending, then programme ID ascending",
+    "diagnostic": "All unique eligible observed held-out programmes",
+    "empty_targets": "AP=0 in metric; no-eligible-target users excluded once before all method comparisons"
+  },
+  "methods": [
+    {
+      "name": "original_popularity",
+      "kind": "popularity",
+      "selection_eligible": true
+    },
+    {
+      "name": "original_content",
+      "kind": "content",
+      "selection_eligible": true
+    },
+    {
+      "name": "original_ppr_0.5",
+      "kind": "original_ppr",
+      "alpha": 0.5,
+      "selection_eligible": true
+    },
+    {
+      "name": "history_seconds",
+      "kind": "personal_history",
+      "signal": "seconds",
+      "power": 1.0,
+      "selection_eligible": false
+    },
+    {
+      "name": "history_watches",
+      "kind": "personal_history",
+      "signal": "watches",
+      "power": 1.0,
+      "selection_eligible": false
+    },
+    {
+      "name": "improved_ppr_0.05_seconds_sqrt",
+      "kind": "improved_ppr",
+      "alpha": 0.05,
+      "seed_signal": "seconds",
+      "seed_power": 0.5,
+      "selection_eligible": true
+    },
+    {
+      "name": "improved_ppr_0.05_seconds_raw",
+      "kind": "improved_ppr",
+      "alpha": 0.05,
+      "seed_signal": "seconds",
+      "seed_power": 1.0,
+      "selection_eligible": true
+    },
+    {
+      "name": "improved_ppr_0.05_watches_sqrt",
+      "kind": "improved_ppr",
+      "alpha": 0.05,
+      "seed_signal": "watches",
+      "seed_power": 0.5,
+      "selection_eligible": true
+    },
+    {
+      "name": "improved_ppr_0.05_watches_raw",
+      "kind": "improved_ppr",
+      "alpha": 0.05,
+      "seed_signal": "watches",
+      "seed_power": 1.0,
+      "selection_eligible": true
+    },
+    {
+      "name": "improved_ppr_0.25_seconds_sqrt",
+      "kind": "improved_ppr",
+      "alpha": 0.25,
+      "seed_signal": "seconds",
+      "seed_power": 0.5,
+      "selection_eligible": true
+    },
+    {
+      "name": "improved_ppr_0.25_seconds_raw",
+      "kind": "improved_ppr",
+      "alpha": 0.25,
+      "seed_signal": "seconds",
+      "seed_power": 1.0,
+      "selection_eligible": true
+    },
+    {
+      "name": "improved_ppr_0.25_watches_sqrt",
+      "kind": "improved_ppr",
+      "alpha": 0.25,
+      "seed_signal": "watches",
+      "seed_power": 0.5,
+      "selection_eligible": true
+    },
+    {
+      "name": "improved_ppr_0.25_watches_raw",
+      "kind": "improved_ppr",
+      "alpha": 0.25,
+      "seed_signal": "watches",
+      "seed_power": 1.0,
+      "selection_eligible": true
+    },
+    {
+      "name": "improved_ppr_0.15_seconds_raw_recency28d",
+      "kind": "improved_ppr",
+      "alpha": 0.15,
+      "seed_signal": "seconds",
+      "seed_power": 1.0,
+      "recency": true,
+      "selection_eligible": true
+    }
+  ],
+  "selection": "Highest early-development primary Top5-seconds MAP@5 among eligible methods; exact ties use the fixed methods array order; personal-history methods are diagnostics only",
+  "confirmation_policy": "After selection is written, assess only the selected method and the three original baselines; never retune or reselect using confirmation",
+  "graph": "Original training-only co-view graph with log1p(seconds) row-normalized contributions; improved variants change restart seeds only",
+  "ppr_max_neighbors": 100,
+  "ppr_tolerance": 1e-08,
+  "ppr_max_iterations": 300,
+  "recency_variant": {
+    "name": "improved_ppr_0.15_seconds_raw_recency28d",
+    "kind": "improved_ppr",
+    "alpha": 0.15,
+    "seed_signal": "seconds",
+    "seed_power": 1.0,
+    "recency": true,
+    "selection_eligible": true,
+    "half_life_days": 28,
+    "event_timestamp": "maximum accepted clipped-overlap right endpoint of each canonical airing, bounded by the training cutoff",
+    "aggregation": "Sum accepted event seconds times 2**(-age_days/28) per user and item; multiply aggregate seconds by recent_seconds/seconds before power1.0",
+    "graph_and_fallback_unchanged": true
+  },
+  "external_uploads": false,
+  "pre_metric_revision": {
+    "recorded_utc": "2026-10-30T17:51:50.645638+00:00",
+    "reason": "Parent finalized lower diffusion and sqrt/raw seeds based on diagnosed log compression before running any v2 metrics; no later grid expansion permitted.",
+    "superseded_initial_variant_names": [
+      "improved_ppr_0.15_seconds",
+      "improved_ppr_0.15_watches",
+      "improved_ppr_0.5_seconds",
+      "improved_ppr_0.5_watches"
+    ],
+    "actual_v2_metrics_executed_before_revision": false,
+    "final_development_model_count": 14
+  }
+}

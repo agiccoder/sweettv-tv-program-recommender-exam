@@ -1,0 +1,487 @@
+{
+  "block": "confirmation",
+  "candidate_count": 6384,
+  "cohort_size": 1246,
+  "warm_users": 1238,
+  "cold_users": 8,
+  "methods": {
+    "original_popularity": {
+      "specification": {
+        "name": "original_popularity",
+        "kind": "popularity",
+        "selection_eligible": true
+      },
+      "fit_seconds": 1.244903375000007,
+      "predict_seconds": 5.883122833000002,
+      "metrics": {
+        "primary": {
+          "map_at_5": 0.17747191011235955,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.17747191011235955,
+            "min": 0.0,
+            "p10": 0.0,
+            "p25": 0.0,
+            "median": 0.14666666666666667,
+            "p75": 0.3,
+            "p90": 0.42000000000000004,
+            "max": 0.8
+          },
+          "ap_zero_users": 375,
+          "ap_one_users": 0,
+          "users_with_hits": 871,
+          "warm_map_at_5": 0.17837641357027464,
+          "cold_map_at_5": 0.037500000000000006
+        },
+        "secondary": {
+          "map_at_5": 0.3100722311396469,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.3100722311396469,
+            "min": 0.0,
+            "p10": 0.0,
+            "p25": 0.1,
+            "median": 0.3,
+            "p75": 0.4833333333333333,
+            "p90": 0.6,
+            "max": 1.0
+          },
+          "ap_zero_users": 169,
+          "ap_one_users": 6,
+          "users_with_hits": 1077,
+          "warm_map_at_5": 0.31064889606892837,
+          "cold_map_at_5": 0.22083333333333333
+        },
+        "all_observed": {
+          "map_at_5": 0.77705189941145,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.7770518994114499,
+            "min": 0.0,
+            "p10": 0.3,
+            "p25": 0.6,
+            "median": 1.0,
+            "p75": 1.0,
+            "p90": 1.0,
+            "max": 1.0
+          },
+          "ap_zero_users": 36,
+          "ap_one_users": 677,
+          "users_with_hits": 1210,
+          "warm_map_at_5": 0.7785110393107162,
+          "cold_map_at_5": 0.55125
+        }
+      },
+      "score_concentration": {
+        "distinct_recommended_programmes": 5,
+        "candidate_coverage_fraction": 0.0007832080200501253,
+        "top5_programmes_exposure_fraction": 1.0,
+        "exposure_hhi": 0.20000000000000004,
+        "most_common_programmes": [
+          {
+            "item_id": 240081,
+            "recommendation_count": 1246
+          },
+          {
+            "item_id": 2400467,
+            "recommendation_count": 1246
+          },
+          {
+            "item_id": 2400480,
+            "recommendation_count": 1246
+          },
+          {
+            "item_id": 2400508,
+            "recommendation_count": 1246
+          },
+          {
+            "item_id": 6500479,
+            "recommendation_count": 1246
+          }
+        ],
+        "interpretation": "Frequency concentration of returned slots across users; model scores are not comparable probabilities"
+      }
+    },
+    "original_content": {
+      "specification": {
+        "name": "original_content",
+        "kind": "content",
+        "selection_eligible": true
+      },
+      "fit_seconds": 1.4104094589999931,
+      "predict_seconds": 8.045799125000002,
+      "metrics": {
+        "primary": {
+          "map_at_5": 0.024563937934724455,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.024563937934724455,
+            "min": 0.0,
+            "p10": 0.0,
+            "p25": 0.0,
+            "median": 0.0,
+            "p75": 0.0,
+            "p90": 0.1,
+            "max": 0.42000000000000004
+          },
+          "ap_zero_users": 949,
+          "ap_one_users": 0,
+          "users_with_hits": 297,
+          "warm_map_at_5": 0.02448034464189553,
+          "cold_map_at_5": 0.037500000000000006
+        },
+        "secondary": {
+          "map_at_5": 0.027859818084537184,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.027859818084537184,
+            "min": 0.0,
+            "p10": 0.0,
+            "p25": 0.0,
+            "median": 0.0,
+            "p75": 0.0,
+            "p90": 0.1,
+            "max": 0.55
+          },
+          "ap_zero_users": 941,
+          "ap_one_users": 0,
+          "users_with_hits": 305,
+          "warm_map_at_5": 0.026612816370490035,
+          "cold_map_at_5": 0.22083333333333333
+        },
+        "all_observed": {
+          "map_at_5": 0.2749438202247191,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.2749438202247191,
+            "min": 0.0,
+            "p10": 0.0,
+            "p25": 0.05,
+            "median": 0.2,
+            "p75": 0.42000000000000004,
+            "p90": 0.6433333333333333,
+            "max": 1.0
+          },
+          "ap_zero_users": 211,
+          "ap_one_users": 23,
+          "users_with_hits": 1035,
+          "warm_map_at_5": 0.2731583198707593,
+          "cold_map_at_5": 0.55125
+        }
+      },
+      "score_concentration": {
+        "distinct_recommended_programmes": 285,
+        "candidate_coverage_fraction": 0.044642857142857144,
+        "top5_programmes_exposure_fraction": 0.34077046548956663,
+        "exposure_hhi": 0.041821713914703164,
+        "most_common_programmes": [
+          {
+            "item_id": 500368,
+            "recommendation_count": 545
+          },
+          {
+            "item_id": 200477,
+            "recommendation_count": 473
+          },
+          {
+            "item_id": 200432,
+            "recommendation_count": 402
+          },
+          {
+            "item_id": 200337,
+            "recommendation_count": 354
+          },
+          {
+            "item_id": 700369,
+            "recommendation_count": 349
+          },
+          {
+            "item_id": 700389,
+            "recommendation_count": 341
+          },
+          {
+            "item_id": 400335,
+            "recommendation_count": 320
+          },
+          {
+            "item_id": 200344,
+            "recommendation_count": 319
+          },
+          {
+            "item_id": 500346,
+            "recommendation_count": 305
+          },
+          {
+            "item_id": 400357,
+            "recommendation_count": 284
+          }
+        ],
+        "interpretation": "Frequency concentration of returned slots across users; model scores are not comparable probabilities"
+      }
+    },
+    "original_ppr_0.5": {
+      "specification": {
+        "name": "original_ppr_0.5",
+        "kind": "original_ppr",
+        "alpha": 0.5,
+        "selection_eligible": true
+      },
+      "fit_seconds": 1.969909291999997,
+      "predict_seconds": 9.338060749999997,
+      "metrics": {
+        "primary": {
+          "map_at_5": 0.1904414125200642,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.19044141252006422,
+            "min": 0.0,
+            "p10": 0.0,
+            "p25": 0.0,
+            "median": 0.16666666666666666,
+            "p75": 0.3333333333333333,
+            "p90": 0.4533333333333333,
+            "max": 0.8
+          },
+          "ap_zero_users": 341,
+          "ap_one_users": 0,
+          "users_with_hits": 905,
+          "warm_map_at_5": 0.1914297253634895,
+          "cold_map_at_5": 0.037500000000000006
+        },
+        "secondary": {
+          "map_at_5": 0.32382557517388977,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.32382557517388977,
+            "min": 0.0,
+            "p10": 0.0,
+            "p25": 0.1,
+            "median": 0.3333333333333333,
+            "p75": 0.52,
+            "p90": 0.6,
+            "max": 1.0
+          },
+          "ap_zero_users": 150,
+          "ap_one_users": 7,
+          "users_with_hits": 1096,
+          "warm_map_at_5": 0.3244911147011309,
+          "cold_map_at_5": 0.22083333333333333
+        },
+        "all_observed": {
+          "map_at_5": 0.7911182450508293,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.7911182450508293,
+            "min": 0.0,
+            "p10": 0.3,
+            "p25": 0.6433333333333333,
+            "median": 1.0,
+            "p75": 1.0,
+            "p90": 1.0,
+            "max": 1.0
+          },
+          "ap_zero_users": 29,
+          "ap_one_users": 702,
+          "users_with_hits": 1217,
+          "warm_map_at_5": 0.792668282175552,
+          "cold_map_at_5": 0.55125
+        }
+      },
+      "score_concentration": {
+        "distinct_recommended_programmes": 88,
+        "candidate_coverage_fraction": 0.013784461152882205,
+        "top5_programmes_exposure_fraction": 0.9213483146067416,
+        "exposure_hhi": 0.1708711278981981,
+        "most_common_programmes": [
+          {
+            "item_id": 2400480,
+            "recommendation_count": 1236
+          },
+          {
+            "item_id": 240081,
+            "recommendation_count": 1199
+          },
+          {
+            "item_id": 6500479,
+            "recommendation_count": 1127
+          },
+          {
+            "item_id": 2400508,
+            "recommendation_count": 1116
+          },
+          {
+            "item_id": 2400467,
+            "recommendation_count": 1062
+          },
+          {
+            "item_id": 10002514,
+            "recommendation_count": 119
+          },
+          {
+            "item_id": 20088,
+            "recommendation_count": 54
+          },
+          {
+            "item_id": 6700482,
+            "recommendation_count": 42
+          },
+          {
+            "item_id": 12001682,
+            "recommendation_count": 38
+          },
+          {
+            "item_id": 200352,
+            "recommendation_count": 37
+          }
+        ],
+        "interpretation": "Frequency concentration of returned slots across users; model scores are not comparable probabilities"
+      }
+    },
+    "improved_ppr_0.25_seconds_sqrt": {
+      "specification": {
+        "name": "improved_ppr_0.25_seconds_sqrt",
+        "kind": "improved_ppr",
+        "alpha": 0.25,
+        "seed_signal": "seconds",
+        "seed_power": 0.5,
+        "selection_eligible": true
+      },
+      "fit_seconds": 2.5977618750000033,
+      "predict_seconds": 8.566877874999989,
+      "metrics": {
+        "primary": {
+          "map_at_5": 0.3046602461209203,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.3046602461209203,
+            "min": 0.0,
+            "p10": 0.0,
+            "p25": 0.1,
+            "median": 0.27999999999999997,
+            "p75": 0.4833333333333333,
+            "p90": 0.6,
+            "max": 1.0
+          },
+          "ap_zero_users": 205,
+          "ap_one_users": 13,
+          "users_with_hits": 1041,
+          "warm_map_at_5": 0.3063866451265482,
+          "cold_map_at_5": 0.037500000000000006
+        },
+        "secondary": {
+          "map_at_5": 0.3917576243980738,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.3917576243980738,
+            "min": 0.0,
+            "p10": 0.05,
+            "p25": 0.2,
+            "median": 0.4,
+            "p75": 0.6,
+            "p90": 0.76,
+            "max": 1.0
+          },
+          "ap_zero_users": 93,
+          "ap_one_users": 19,
+          "users_with_hits": 1153,
+          "warm_map_at_5": 0.39286214324178786,
+          "cold_map_at_5": 0.22083333333333333
+        },
+        "all_observed": {
+          "map_at_5": 0.7746281433921883,
+          "cohort_size": 1246,
+          "empty_target_users": 0,
+          "ap_distribution": {
+            "count": 1246,
+            "mean": 0.7746281433921883,
+            "min": 0.0,
+            "p10": 0.3,
+            "p25": 0.6,
+            "median": 1.0,
+            "p75": 1.0,
+            "p90": 1.0,
+            "max": 1.0
+          },
+          "ap_zero_users": 22,
+          "ap_one_users": 638,
+          "users_with_hits": 1224,
+          "warm_map_at_5": 0.7760716208939149,
+          "cold_map_at_5": 0.55125
+        }
+      },
+      "score_concentration": {
+        "distinct_recommended_programmes": 326,
+        "candidate_coverage_fraction": 0.05106516290726817,
+        "top5_programmes_exposure_fraction": 0.4802568218298555,
+        "exposure_hhi": 0.06363997536901474,
+        "most_common_programmes": [
+          {
+            "item_id": 2400480,
+            "recommendation_count": 1080
+          },
+          {
+            "item_id": 240081,
+            "recommendation_count": 711
+          },
+          {
+            "item_id": 2400508,
+            "recommendation_count": 469
+          },
+          {
+            "item_id": 6500479,
+            "recommendation_count": 445
+          },
+          {
+            "item_id": 2400467,
+            "recommendation_count": 287
+          },
+          {
+            "item_id": 20088,
+            "recommendation_count": 229
+          },
+          {
+            "item_id": 700389,
+            "recommendation_count": 191
+          },
+          {
+            "item_id": 12001682,
+            "recommendation_count": 165
+          },
+          {
+            "item_id": 400361,
+            "recommendation_count": 157
+          },
+          {
+            "item_id": 400335,
+            "recommendation_count": 141
+          }
+        ],
+        "interpretation": "Frequency concentration of returned slots across users; model scores are not comparable probabilities"
+      }
+    }
+  },
+  "all_exact_fraction_audits_passed": true,
+  "model_scores_are_probabilities": false
+}

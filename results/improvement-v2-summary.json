@@ -1,0 +1,32 @@
+{
+  "status": "complete_local_v2_proxy_evaluation",
+  "selected_method": "improved_ppr_0.25_seconds_sqrt",
+  "selection_frozen_before_confirmation": true,
+  "primary_target": "At most five unique eligible held-out programmes ranked by total accepted overlap seconds descending, then programme ID ascending",
+  "hidden_evaluator_identity_established": false,
+  "original_confirmation_holdout_previously_inspected": true,
+  "development": {
+    "original_popularity": 0.19901545972335233,
+    "original_content": 0.04839978302142663,
+    "original_ppr_0.5": 0.22124762679685384,
+    "history_seconds": 0.3310320043395715,
+    "history_watches": 0.3319039869812856,
+    "improved_ppr_0.05_seconds_sqrt": 0.33498372660699754,
+    "improved_ppr_0.05_seconds_raw": 0.3316232709519935,
+    "improved_ppr_0.05_watches_sqrt": 0.33202965373836,
+    "improved_ppr_0.05_watches_raw": 0.3330955609800199,
+    "improved_ppr_0.25_seconds_sqrt": 0.33938839164632495,
+    "improved_ppr_0.25_seconds_raw": 0.3377502034174126,
+    "improved_ppr_0.25_watches_sqrt": 0.31905975951541454,
+    "improved_ppr_0.25_watches_raw": 0.3315685742699575,
+    "improved_ppr_0.15_seconds_raw_recency28d": 0.33318958502847845
+  },
+  "confirmation": {
+    "original_popularity": 0.17747191011235955,
+    "original_content": 0.024563937934724455,
+    "original_ppr_0.5": 0.1904414125200642,
+    "improved_ppr_0.25_seconds_sqrt": 0.3046602461209203
+  },
+  "final_submission_sha256": "d5060c1949c8a555bc6c607b2ba7f5e93806add1ab7991c9e2a5b9d242537f85",
+  "external_uploads": false
+}
