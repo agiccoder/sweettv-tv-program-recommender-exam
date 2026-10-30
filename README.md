@@ -17,7 +17,14 @@ These later-period results use the **same 1,246 users and candidates** for all m
 
 Primary relevance is each user's at-most-five eligible held-out programmes with the most accepted viewing seconds. Secondary relevance uses accepted-airing counts. The original all-watched metric is retained separately. These are explicit local proxies: the competition's exact hidden target construction is not established, and local numbers do not predict its returned score.
 
-The original user-provided Kaggle screenshot displays public 0.29103 and private 0.28587. Its crop does not establish an account, submission ID, description or exact CSV hash. **No returned Kaggle score is claimed for v2.**
+User-provided Kaggle screenshots show the following completed submissions:
+
+| Visible filename | Public score | Private score |
+|---|---:|---:|
+| `submission.csv` | 0.29103 | 0.28587 |
+| `submission_v2.csv` | 0.32589 | 0.28919 |
+
+The displayed private gain is **0.00332 (1.16% relative)**, while the public gain is 0.03486 (11.98%). The large local gain transferred weakly to the private score. This does not establish equivalence between local target proxies and the hidden evaluator. The second filename and user context match the released v2 file, but neither crop identifies an account, submission ID, description, absolute upload time or submitted file hash; that exact linkage remains unverified. Original screenshot bytes are preserved privately. No new model or validation search was run after receiving the v2 score.
 
 ## Current submission and preserved first version
 

@@ -1,0 +1,27 @@
+{
+  "source": "Two genuine user-provided cropped completed-submission screenshots, original bytes retained privately",
+  "observations": [
+    {
+      "visible_filename": "submission.csv",
+      "public_score": 0.29103,
+      "private_score": 0.28587
+    },
+    {
+      "visible_filename": "submission_v2.csv",
+      "public_score": 0.32589,
+      "private_score": 0.28919
+    }
+  ],
+  "displayed_score_difference": {
+    "public_absolute": 0.03486,
+    "private_absolute": 0.00332,
+    "public_relative_percent": 11.978146582826513,
+    "private_relative_percent": 1.1613670549550494,
+    "scope": "Arithmetic differences between displayed user-provided score observations; not causal proof or independently verified Kaggle file linkage"
+  },
+  "v2_released_csv_sha256": "d5060c1949c8a555bc6c607b2ba7f5e93806add1ab7991c9e2a5b9d242537f85",
+  "v2_filename_and_user_context_match": true,
+  "exact_submitted_csv_hash_independently_verified": false,
+  "submission_ids_or_account_verified": false,
+  "limitations": "No absolute timestamp, description, account, submission ID or hash is visible in the crops. Relative displayed times are not converted to submission timestamps. No new model-selection trial uses returned scores."
+}
