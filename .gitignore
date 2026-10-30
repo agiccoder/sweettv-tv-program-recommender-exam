@@ -1,0 +1,10 @@
+.venv/
+data/
+experiments/
+evidence/
+__pycache__/
+*.pyc
+.env*
+*kaggle.json
+*.jsonl
+.DS_Store

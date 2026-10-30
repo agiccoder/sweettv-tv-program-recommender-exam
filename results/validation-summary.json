@@ -1,0 +1,73 @@
+{
+  "status": "complete",
+  "methods": {
+    "popularity": {
+      "map_at_5": 0.77705189941145,
+      "cohort_size": 1246,
+      "empty_target_users": 0,
+      "fit_seconds": 1.071838917000008,
+      "predict_seconds": 5.471893250000022,
+      "candidate_count": 6384,
+      "warm_users": 1238,
+      "cold_users": 8,
+      "warm_map_at_5": 0.7785110393107145,
+      "cold_map_at_5": 0.55125
+    },
+    "content": {
+      "map_at_5": 0.2749438202247191,
+      "cohort_size": 1246,
+      "empty_target_users": 0,
+      "fit_seconds": 1.2210123749999866,
+      "predict_seconds": 7.171007000000003,
+      "candidate_count": 6384,
+      "warm_users": 1238,
+      "cold_users": 8,
+      "warm_map_at_5": 0.27315831987075945,
+      "cold_map_at_5": 0.55125
+    },
+    "ppr_0.5": {
+      "map_at_5": 0.7911182450508293,
+      "cohort_size": 1246,
+      "empty_target_users": 0,
+      "fit_seconds": 1.6904349579999973,
+      "predict_seconds": 8.521013791000001,
+      "candidate_count": 6384,
+      "warm_users": 1238,
+      "cold_users": 8,
+      "warm_map_at_5": 0.7926682821755503,
+      "cold_map_at_5": 0.55125
+    },
+    "ppr_0.85": {
+      "map_at_5": 0.7802541466024613,
+      "cohort_size": 1246,
+      "empty_target_users": 0,
+      "fit_seconds": 1.7327397079999969,
+      "predict_seconds": 10.049779040999994,
+      "candidate_count": 6384,
+      "warm_users": 1238,
+      "cold_users": 8,
+      "warm_map_at_5": 0.7817339795368858,
+      "cold_map_at_5": 0.55125
+    }
+  },
+  "selected_method": "ppr_0.5",
+  "selected_ppr": "ppr_0.5",
+  "search": {
+    "threshold_seconds": 120,
+    "repeat_policy": "allow",
+    "ppr_alphas": [
+      0.5,
+      0.85
+    ],
+    "ppr_max_neighbors": 100,
+    "ppr_tol": 1e-08,
+    "ppr_max_iter": 300,
+    "content": "binary metadata tokens, smooth IDF, L2 vectors, log1p(seconds) profile",
+    "selection": "highest common-cohort MAP@5; exact ties popularity, content, ppr_0.5, ppr_0.85",
+    "seed": 20261030,
+    "hybrid": null
+  },
+  "cohort_size": 1246,
+  "selection_source": "local temporal validation only",
+  "competition_metric_equivalence": "not established; slides convention implemented locally"
+}
