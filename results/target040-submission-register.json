@@ -1,0 +1,925 @@
+{
+  "source": "Authenticated own-account official Kaggle API",
+  "source_results_sha256": "a03a504387b55e3dc8b2a072c81d9cad9870242628e95358092c47d12e0e960f",
+  "best_submission_id": 57875732,
+  "observations": [
+    {
+      "id": 57813118,
+      "method": "v1 original PPR",
+      "status": "COMPLETE",
+      "public_score": "0.29103",
+      "private_score": "0.28587",
+      "date": "2026-10-30T17:41:48.21Z",
+      "description": ""
+    },
+    {
+      "id": 57813683,
+      "method": "v2 PPR",
+      "status": "COMPLETE",
+      "public_score": "0.32589",
+      "private_score": "0.28919",
+      "date": "2026-10-30T18:08:31.477Z",
+      "description": ""
+    },
+    {
+      "id": 57871867,
+      "method": "",
+      "status": "COMPLETE",
+      "public_score": "0.38221",
+      "private_score": "0.36630",
+      "date": "2026-11-01T12:46:27.657Z",
+      "description": ""
+    },
+    {
+      "id": 57872422,
+      "method": "ppr_mix_rw_75",
+      "status": "COMPLETE",
+      "public_score": "0.37324",
+      "private_score": "0.35452",
+      "date": "2026-11-01T13:06:45.493Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 ppr_mix_rw_75 | sha256 8764aa5f7126ca2bde843216d7be70a60585176232ab3df3e56c5a4fb2a8beee"
+    },
+    {
+      "id": 57872624,
+      "method": "rate_mix_seconds_50",
+      "status": "COMPLETE",
+      "public_score": "0.37005",
+      "private_score": "0.35327",
+      "date": "2026-11-01T13:13:44.347Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rate_mix_seconds_50 | sha256 7d738470463a9b1804398e9e858d5531e5481b79cd969f757b24bbca4c233d3c"
+    },
+    {
+      "id": 57872899,
+      "method": "rrf_ppr_nmf16_10",
+      "status": "COMPLETE",
+      "public_score": "0.38615",
+      "private_score": "0.37018",
+      "date": "2026-11-01T13:24:38.31Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_ppr_nmf16_10 | sha256 072d7c50e5d9b3d6da83c4f0fa0ae956382ed23c2898daeafbc24333e66cc01d"
+    },
+    {
+      "id": 57873857,
+      "method": "eng_rrf_recent_capped600",
+      "status": "COMPLETE",
+      "public_score": "0.37962",
+      "private_score": "0.36363",
+      "date": "2026-11-01T13:58:36.943Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 eng_rrf_recent_capped600 | sha256 8cefdc8efeeeebd2d6a97959d37f32afe4e222ba2701ef70b2f8aea917d63789"
+    },
+    {
+      "id": 57875303,
+      "method": "rrf_ppr_nmf32_25",
+      "status": "COMPLETE",
+      "public_score": "0.39905",
+      "private_score": "0.37697",
+      "date": "2026-11-01T14:56:32.907Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_ppr_nmf32_25 | sha256 bf8c23a2b94de5c72df5db33d924af41f1ba749c3ada16dbc7ace0518616df61"
+    },
+    {
+      "id": 57875304,
+      "method": "rrf_ppr_nmf32_10",
+      "status": "COMPLETE",
+      "public_score": "0.38353",
+      "private_score": "0.36561",
+      "date": "2026-11-01T14:56:32.95Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_ppr_nmf32_10 | sha256 d9b358097721bd323f8f430f255b5a45a5f7f116a6e89f3e9491c3704912220d"
+    },
+    {
+      "id": 57875305,
+      "method": "rrf_ppr_nmf16_25",
+      "status": "COMPLETE",
+      "public_score": "0.39988",
+      "private_score": "0.37949",
+      "date": "2026-11-01T14:56:33.03Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_ppr_nmf16_25 | sha256 cbd4890621ff1c5b75ad18923a3fdba44f1a0a136a7282fed06ab0682cbf8b50"
+    },
+    {
+      "id": 57875308,
+      "method": "rrf_history_nmf16_25",
+      "status": "COMPLETE",
+      "public_score": "0.39645",
+      "private_score": "0.37552",
+      "date": "2026-11-01T14:56:39.03Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_history_nmf16_25 | sha256 3a85680fcd91da9f1f215fbd77cf071e149403231ded08d8f26f54dc384e2c50"
+    },
+    {
+      "id": 57875309,
+      "method": "count_nmf32",
+      "status": "COMPLETE",
+      "public_score": "0.39298",
+      "private_score": "0.37898",
+      "date": "2026-11-01T14:56:39.097Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 count_nmf32 | sha256 6d82d3c04588cdc5049f4d3015c8df8510a9dd0f1ff7f3180e4a40d01054a0bc"
+    },
+    {
+      "id": 57875310,
+      "method": "rrf_history_nmf32_25",
+      "status": "COMPLETE",
+      "public_score": "0.39373",
+      "private_score": "0.37352",
+      "date": "2026-11-01T14:56:39.23Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_history_nmf32_25 | sha256 28d8a493c355dafd7e895c6d2607166f67d38ec424af00ccfc088b439e301e0e"
+    },
+    {
+      "id": 57875313,
+      "method": "count_nmf64",
+      "status": "COMPLETE",
+      "public_score": "0.38855",
+      "private_score": "0.37053",
+      "date": "2026-11-01T14:56:44.723Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 count_nmf64 | sha256 9dda1352a9d87b703863ee6ae2c10a6d957381978cf7f3041f434a40b1f2fc47"
+    },
+    {
+      "id": 57875314,
+      "method": "ppr_mix_w_75",
+      "status": "COMPLETE",
+      "public_score": "0.38127",
+      "private_score": "0.36162",
+      "date": "2026-11-01T14:56:44.973Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 ppr_mix_w_75 | sha256 a86a051f88bb13b0859e250eb32657f92b08766d4850e8aa88a252b740844a48"
+    },
+    {
+      "id": 57875315,
+      "method": "ppr_mix_w_100",
+      "status": "COMPLETE",
+      "public_score": "0.38592",
+      "private_score": "0.36778",
+      "date": "2026-11-01T14:56:45.98Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 ppr_mix_w_100 | sha256 be4fc0c42fc63c0cb2c67cbe3a7551075a3f5ae5d4ff3c97c926a3addc490291"
+    },
+    {
+      "id": 57875324,
+      "method": "ppr_mix_rw_100",
+      "status": "COMPLETE",
+      "public_score": "0.37417",
+      "private_score": "0.35737",
+      "date": "2026-11-01T14:56:51.017Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 ppr_mix_rw_100 | sha256 2098591234f3cabcb0ece75f0a7847e3fa55bf71dc1bf74c4a86eb7bf8220353"
+    },
+    {
+      "id": 57875325,
+      "method": "ppr_mix_rw_50",
+      "status": "COMPLETE",
+      "public_score": "0.37332",
+      "private_score": "0.35095",
+      "date": "2026-11-01T14:56:51.037Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 ppr_mix_rw_50 | sha256 6a0870021a7c7fa17007622879dea7e01c087eedfb1a56b1c413f100528039c8"
+    },
+    {
+      "id": 57875326,
+      "method": "rrf_ppr_watches_75",
+      "status": "COMPLETE",
+      "public_score": "0.37731",
+      "private_score": "0.35135",
+      "date": "2026-11-01T14:56:52.18Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_ppr_watches_75 | sha256 f9ddafb8327d07e18681e37c888ec0a24299873c84fcf4f2ae0207f1a0c74aa8"
+    },
+    {
+      "id": 57875329,
+      "method": "rate_mix_seconds_100",
+      "status": "COMPLETE",
+      "public_score": "0.34193",
+      "private_score": "0.32759",
+      "date": "2026-11-01T14:56:56.213Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rate_mix_seconds_100 | sha256 46ece83a029de3bdffafbba0c2f8050430936721a111233f5e48e418a07d729b"
+    },
+    {
+      "id": 57875330,
+      "method": "rate_mix_airings_50",
+      "status": "COMPLETE",
+      "public_score": "0.37438",
+      "private_score": "0.35803",
+      "date": "2026-11-01T14:56:56.25Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rate_mix_airings_50 | sha256 11dcf018698534eb3b8e4695b8040d2691e215d53e1fa99d439768ccac1b1131"
+    },
+    {
+      "id": 57875332,
+      "method": "rate_v2_seconds_50",
+      "status": "COMPLETE",
+      "public_score": "0.31555",
+      "private_score": "0.29079",
+      "date": "2026-11-01T14:56:57.727Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rate_v2_seconds_50 | sha256 a42ce4c500ce357af0c23957ee7848ef2e915b5b8ebd6412eee7bc642cd61234"
+    },
+    {
+      "id": 57875467,
+      "method": "rate_v2_seconds_100",
+      "status": "COMPLETE",
+      "public_score": "0.21706",
+      "private_score": "0.20956",
+      "date": "2026-11-01T15:01:10.153Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rate_v2_seconds_100 | sha256 d543d31b25cde048fa15b8d45403ae3718b8491c5ba3b7513980bf496ca09d8b"
+    },
+    {
+      "id": 57875474,
+      "method": "history_rate_airings",
+      "status": "COMPLETE",
+      "public_score": "0.38334",
+      "private_score": "0.36703",
+      "date": "2026-11-01T15:01:17.98Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 history_rate_airings | sha256 5f70f1675e517b557655b5dafff03445c51253a5cc2ed1ecc83520168b7118e6"
+    },
+    {
+      "id": 57875481,
+      "method": "eng_rrf_capped1800",
+      "status": "COMPLETE",
+      "public_score": "0.36402",
+      "private_score": "0.34336",
+      "date": "2026-11-01T15:01:26.143Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 eng_rrf_capped1800 | sha256 ae46f37e32a45e738d59e45b59fc76acc3ef307ea956ab743e7d8de5916f7ef3"
+    },
+    {
+      "id": 57875487,
+      "method": "eng_rrf_capped600",
+      "status": "COMPLETE",
+      "public_score": "0.38961",
+      "private_score": "0.36716",
+      "date": "2026-11-01T15:01:33.953Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 eng_rrf_capped600 | sha256 96e5ebadd22d25888ab2b0ae11f06a895f3e54b153d9d5ec83c3aec95196edb2"
+    },
+    {
+      "id": 57875491,
+      "method": "eng_rrf_active_days",
+      "status": "COMPLETE",
+      "public_score": "0.37452",
+      "private_score": "0.35531",
+      "date": "2026-11-01T15:01:41.863Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 eng_rrf_active_days | sha256 0aa035a22aeced1cc030d24049dd9c874bf33a6f738ffb919adb12a8ff1d2c37"
+    },
+    {
+      "id": 57875496,
+      "method": "eng_rate_recent_capped600",
+      "status": "COMPLETE",
+      "public_score": "0.36326",
+      "private_score": "0.34453",
+      "date": "2026-11-01T15:01:49.74Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 eng_rate_recent_capped600 | sha256 9639d27562b05947f136326d778cb2320f157dac9ee3b5beafbc92ed535db623"
+    },
+    {
+      "id": 57875500,
+      "method": "eng_rate_capped1800",
+      "status": "COMPLETE",
+      "public_score": "0.35561",
+      "private_score": "0.33330",
+      "date": "2026-11-01T15:01:57.33Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 eng_rate_capped1800 | sha256 d46b68f32ec863156cdedfcd188abd79d95453585a2029e67460c1e5fe2e8ef4"
+    },
+    {
+      "id": 57875504,
+      "method": "ind_mf_a1_c100",
+      "status": "COMPLETE",
+      "public_score": "0.38815",
+      "private_score": "0.37342",
+      "date": "2026-11-01T15:02:04.977Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 ind_mf_a1_c100 | sha256 e9e8c4fdaeda43bb669a090148fb8f1f12710dab174e6ab3876fafec99cadc7d"
+    },
+    {
+      "id": 57875510,
+      "method": "history_seconds",
+      "status": "COMPLETE",
+      "public_score": "0.27817",
+      "private_score": "0.24814",
+      "date": "2026-11-01T15:02:12.997Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 history_seconds | sha256 1c22e3192094909c858b57eca996a5ab44d4fdbe2c1cf8154c3a47b6e8b36979"
+    },
+    {
+      "id": 57875516,
+      "method": "history_recent_watches",
+      "status": "COMPLETE",
+      "public_score": "0.36925",
+      "private_score": "0.35235",
+      "date": "2026-11-01T15:02:20.79Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 history_recent_watches | sha256 cc4991f4888efcb9dcac5fc793bbfabfa7699094eca60721cbb9de5090642f7d"
+    },
+    {
+      "id": 57875519,
+      "method": "hybrid_opportunity_total_70_20_10",
+      "status": "COMPLETE",
+      "public_score": "0.33330",
+      "private_score": "0.29453",
+      "date": "2026-11-01T15:02:29.04Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 hybrid_opportunity_total_70_20_10 | sha256 63b229512fcea2a463704461bfe52ebd98ba94da04ccb78237ea9f93a6d72d51"
+    },
+    {
+      "id": 57875732,
+      "method": "mfshare_rate_16_50",
+      "status": "COMPLETE",
+      "public_score": "0.40643",
+      "private_score": "0.39000",
+      "date": "2026-11-01T15:10:34.963Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_rate_16_50 | sha256 8b722b51734d6b7d6b46be0b563afce424dbbf5214dd7e18170ca82152b9b7e1"
+    },
+    {
+      "id": 57875737,
+      "method": "mfshare_rate_16_75",
+      "status": "COMPLETE",
+      "public_score": "0.40422",
+      "private_score": "0.38846",
+      "date": "2026-11-01T15:10:42.563Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_rate_16_75 | sha256 c42eef57a96ceb87cda6a6df07d5c824c734cc1871a93fe6f76fe4309da079cc"
+    },
+    {
+      "id": 57875740,
+      "method": "mfshare_rate_32_50",
+      "status": "COMPLETE",
+      "public_score": "0.40594",
+      "private_score": "0.38844",
+      "date": "2026-11-01T15:10:50.33Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_rate_32_50 | sha256 48c8e275721c54190916b364a97e5aeac3cecc47c475a4e586917d3668794669"
+    },
+    {
+      "id": 57875743,
+      "method": "mfshare_rate_32_75",
+      "status": "COMPLETE",
+      "public_score": "0.40353",
+      "private_score": "0.38771",
+      "date": "2026-11-01T15:10:58.32Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_rate_32_75 | sha256 a2cc71201875f76c6fd765992debbc93b6b82c1fe2387415604ed111826e939c"
+    },
+    {
+      "id": 57875746,
+      "method": "mfshare_rate_64_50",
+      "status": "COMPLETE",
+      "public_score": "0.39883",
+      "private_score": "0.37952",
+      "date": "2026-11-01T15:11:05.907Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_rate_64_50 | sha256 5609cb230a721c941fc768a6b6caa376e62716db9e7e3ca0ad8608f9bb110a2e"
+    },
+    {
+      "id": 57875749,
+      "method": "mfshare_rate_64_75",
+      "status": "COMPLETE",
+      "public_score": "0.39755",
+      "private_score": "0.37856",
+      "date": "2026-11-01T15:11:13.317Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_rate_64_75 | sha256 29febe7f7baecc7fc3c3a4e602d6233c6f67e4a927f5e801cee4ecb6ad0e8797"
+    },
+    {
+      "id": 57875751,
+      "method": "mfshare_eng_16_50",
+      "status": "COMPLETE",
+      "public_score": "0.40478",
+      "private_score": "0.38545",
+      "date": "2026-11-01T15:11:20.973Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_eng_16_50 | sha256 b1ccb3fcaa5da8ca8fc0a3dbf950d87a26c4a4444b82fdb9b30eb68992346408"
+    },
+    {
+      "id": 57875758,
+      "method": "mfshare_eng_16_75",
+      "status": "COMPLETE",
+      "public_score": "0.40395",
+      "private_score": "0.38771",
+      "date": "2026-11-01T15:11:28.693Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_eng_16_75 | sha256 5b1cc7a29ee260fe6a5d98663a73e16c25c61f8b92b8b0ef774056f58acaa7bf"
+    },
+    {
+      "id": 57875763,
+      "method": "mfshare_eng_32_50",
+      "status": "COMPLETE",
+      "public_score": "0.40587",
+      "private_score": "0.38482",
+      "date": "2026-11-01T15:11:36.623Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_eng_32_50 | sha256 f09617d5e0d7b23209df437b7a541e8f29f703f2d5ea1a91294601982b08a374"
+    },
+    {
+      "id": 57875767,
+      "method": "mfshare_eng_32_75",
+      "status": "COMPLETE",
+      "public_score": "0.40328",
+      "private_score": "0.38806",
+      "date": "2026-11-01T15:11:44.313Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_eng_32_75 | sha256 e5a9dda0430f69ff0642a7a185cf253c382511fd27baab0358e510837ec632c2"
+    },
+    {
+      "id": 57875770,
+      "method": "mfshare_eng_64_50",
+      "status": "COMPLETE",
+      "public_score": "0.39708",
+      "private_score": "0.37976",
+      "date": "2026-11-01T15:11:52.647Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_eng_64_50 | sha256 e93635e22fc9c483165def8e5c6963d676d86fc80fe726421d9486f531a39d3a"
+    },
+    {
+      "id": 57875772,
+      "method": "mfshare_eng_64_75",
+      "status": "COMPLETE",
+      "public_score": "0.39907",
+      "private_score": "0.37616",
+      "date": "2026-11-01T15:12:00.11Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_eng_64_75 | sha256 158801730033844f252670a1c68435deb9da019820aaf4f665ea3b4d1d6fa8b0"
+    },
+    {
+      "id": 57875776,
+      "method": "mfshare_history_16_50",
+      "status": "COMPLETE",
+      "public_score": "0.40588",
+      "private_score": "0.38480",
+      "date": "2026-11-01T15:12:07.697Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_history_16_50 | sha256 e43b958daddf78f3ae909a0458358697e13387a92b4051aa50f9abe4b1091de0"
+    },
+    {
+      "id": 57875778,
+      "method": "mfshare_history_16_75",
+      "status": "COMPLETE",
+      "public_score": "0.40103",
+      "private_score": "0.38668",
+      "date": "2026-11-01T15:12:15.573Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_history_16_75 | sha256 afd94dcc9871276770196bc959a74f92a55f2d770a6adc132b7e43bf9d48aba2"
+    },
+    {
+      "id": 57875785,
+      "method": "mfshare_history_32_50",
+      "status": "COMPLETE",
+      "public_score": "0.40212",
+      "private_score": "0.38242",
+      "date": "2026-11-01T15:12:23.207Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_history_32_50 | sha256 32e9e335952a8cf6ce715828bfb794424f4d67473172920927bdea270299e365"
+    },
+    {
+      "id": 57875789,
+      "method": "mfshare_history_32_75",
+      "status": "COMPLETE",
+      "public_score": "0.40051",
+      "private_score": "0.38602",
+      "date": "2026-11-01T15:12:30.667Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_history_32_75 | sha256 6fe5db64f0baf1121873b0852894f34f36de5708412e0bb37ba0f1b25f94619c"
+    },
+    {
+      "id": 57875793,
+      "method": "mfshare_history_64_50",
+      "status": "COMPLETE",
+      "public_score": "0.39348",
+      "private_score": "0.37563",
+      "date": "2026-11-01T15:12:38.223Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_history_64_50 | sha256 807ce2985e865a9be1ee59a3b6717bfacdf382d55a500e956339477e767d4d91"
+    },
+    {
+      "id": 57875798,
+      "method": "mfshare_history_64_75",
+      "status": "COMPLETE",
+      "public_score": "0.39311",
+      "private_score": "0.37487",
+      "date": "2026-11-01T15:12:45.977Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_history_64_75 | sha256 8556e3610565b0873cf4b5d1a3deb16971d55e09786f73ef97c00e6ca3b70d54"
+    },
+    {
+      "id": 57875804,
+      "method": "mfshare_v2_16_50",
+      "status": "COMPLETE",
+      "public_score": "0.38228",
+      "private_score": "0.35068",
+      "date": "2026-11-01T15:12:53.907Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_v2_16_50 | sha256 a10fc924c328c2d2aa07e11ca05939bbac37c0b555bd2aef847e53032633ed3c"
+    },
+    {
+      "id": 57875808,
+      "method": "mfshare_v2_16_75",
+      "status": "COMPLETE",
+      "public_score": "0.39603",
+      "private_score": "0.37466",
+      "date": "2026-11-01T15:13:01.673Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_v2_16_75 | sha256 9c4004037a9376f4793202695827f22fb423f7ab1e5e40a6536ba16b68f95f9b"
+    },
+    {
+      "id": 57875811,
+      "method": "mfshare_v2_32_50",
+      "status": "COMPLETE",
+      "public_score": "0.38556",
+      "private_score": "0.34738",
+      "date": "2026-11-01T15:13:09.307Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_v2_32_50 | sha256 a2a15556c4642ffe0218a0fa996918b6c1309f54afbea9d0644995e46759fb5f"
+    },
+    {
+      "id": 57875818,
+      "method": "mfshare_v2_32_75",
+      "status": "COMPLETE",
+      "public_score": "0.39358",
+      "private_score": "0.37357",
+      "date": "2026-11-01T15:13:17Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_v2_32_75 | sha256 03148b30209589a9597851fd3f6f1dd2f5a3954ce6827116a379f2e42b2cb92e"
+    },
+    {
+      "id": 57875821,
+      "method": "mfshare_v2_64_50",
+      "status": "COMPLETE",
+      "public_score": "0.37348",
+      "private_score": "0.33905",
+      "date": "2026-11-01T15:13:24.567Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_v2_64_50 | sha256 ad187788e88adb5514d3a9b95d89e525e6cb1098e419ec4831fce45ce3aad696"
+    },
+    {
+      "id": 57875823,
+      "method": "mfshare_v2_64_75",
+      "status": "COMPLETE",
+      "public_score": "0.38621",
+      "private_score": "0.36085",
+      "date": "2026-11-01T15:13:32.31Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_v2_64_75 | sha256 594ceeb3d0f5e0e3edf4e2eb76767915f75c40400f209500a58aa1a1cf032388"
+    },
+    {
+      "id": 57876055,
+      "method": "mfinput_sqrtcount_16",
+      "status": "COMPLETE",
+      "public_score": "0.36650",
+      "private_score": "0.35371",
+      "date": "2026-11-01T15:22:36.32Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfinput_sqrtcount_16 | sha256 c6146dc4a056aa83c1ba926d2fdef2294cf14d952495686771aabc19b9489e9b"
+    },
+    {
+      "id": 57876062,
+      "method": "rrf_mfinput_sqrtcount_16_10",
+      "status": "COMPLETE",
+      "public_score": "0.38722",
+      "private_score": "0.36921",
+      "date": "2026-11-01T15:22:44.347Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_sqrtcount_16_10 | sha256 2ef94aad4a53701fdc0e6b0fd7619084d8d8c1a3afde66e583ab0f3edcc08c8e"
+    },
+    {
+      "id": 57876070,
+      "method": "rrf_mfinput_sqrtcount_16_50",
+      "status": "COMPLETE",
+      "public_score": "0.39751",
+      "private_score": "0.38376",
+      "date": "2026-11-01T15:22:52.45Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_sqrtcount_16_50 | sha256 f9dfdc0428e72ff3b184106cef05c579b1d06fedc64aef477e26d1a57ee0e691"
+    },
+    {
+      "id": 57876073,
+      "method": "mfinput_sqrtcount_32",
+      "status": "COMPLETE",
+      "public_score": "0.36074",
+      "private_score": "0.35030",
+      "date": "2026-11-01T15:23:00.247Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfinput_sqrtcount_32 | sha256 5722d94edba4e262ad944f7ba272cf25c839ec2ea6eee4ca754058dbe377424f"
+    },
+    {
+      "id": 57876078,
+      "method": "rrf_mfinput_sqrtcount_32_10",
+      "status": "COMPLETE",
+      "public_score": "0.38660",
+      "private_score": "0.36753",
+      "date": "2026-11-01T15:23:07.933Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_sqrtcount_32_10 | sha256 3b57acd26b6dd03af92758a35d42e29ad37665b92af2d6e4bdb39a0c8e27ca28"
+    },
+    {
+      "id": 57876082,
+      "method": "rrf_mfinput_sqrtcount_32_50",
+      "status": "COMPLETE",
+      "public_score": "0.39757",
+      "private_score": "0.37994",
+      "date": "2026-11-01T15:23:16.063Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_sqrtcount_32_50 | sha256 d22b86ade58fd927c36d8122e6557790c0d94d352714ffd8e5a1dc934700216b"
+    },
+    {
+      "id": 57876084,
+      "method": "mfinput_rawcount_16",
+      "status": "COMPLETE",
+      "public_score": "0.38791",
+      "private_score": "0.36789",
+      "date": "2026-11-01T15:23:24.4Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfinput_rawcount_16 | sha256 bb8cbbbfeb70ded56a24283bd102b2d0da566854229e1688407025edae28b98f"
+    },
+    {
+      "id": 57876089,
+      "method": "rrf_mfinput_rawcount_16_10",
+      "status": "COMPLETE",
+      "public_score": "0.38564",
+      "private_score": "0.37048",
+      "date": "2026-11-01T15:23:32.737Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_rawcount_16_10 | sha256 c4ab53bb06c288f0ba218d6c13a2c9e4d9f9dd1ea237ad4adbb025d5ab5638bf"
+    },
+    {
+      "id": 57876097,
+      "method": "rrf_mfinput_rawcount_16_50",
+      "status": "COMPLETE",
+      "public_score": "0.40251",
+      "private_score": "0.38973",
+      "date": "2026-11-01T15:23:41.337Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_rawcount_16_50 | sha256 c35f37bfeb14d77c483c4696ecc8e4ec1025018bbb55b46e0f0cfecd49557122"
+    },
+    {
+      "id": 57876105,
+      "method": "mfinput_rawcount_32",
+      "status": "COMPLETE",
+      "public_score": "0.39043",
+      "private_score": "0.37965",
+      "date": "2026-11-01T15:23:50.087Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfinput_rawcount_32 | sha256 c6199b814e54a92425cc62658d0d95e11ffc183cbb8f7264155542ebc00abcac"
+    },
+    {
+      "id": 57876107,
+      "method": "rrf_mfinput_rawcount_32_10",
+      "status": "COMPLETE",
+      "public_score": "0.38330",
+      "private_score": "0.36588",
+      "date": "2026-11-01T15:23:58.567Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_rawcount_32_10 | sha256 8123aaef89319bdfcfff944d715f5574890b59e043c3a7dc1b9b125cc0ab880e"
+    },
+    {
+      "id": 57876109,
+      "method": "rrf_mfinput_rawcount_32_50",
+      "status": "COMPLETE",
+      "public_score": "0.40003",
+      "private_score": "0.38211",
+      "date": "2026-11-01T15:24:07.013Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_rawcount_32_50 | sha256 795f86a30926a970ad73dc3a9e2434d21d2a22b6b221a03dbce095720b838e57"
+    },
+    {
+      "id": 57876115,
+      "method": "mfinput_sqrtseconds_16",
+      "status": "COMPLETE",
+      "public_score": "0.31366",
+      "private_score": "0.29902",
+      "date": "2026-11-01T15:24:15.113Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfinput_sqrtseconds_16 | sha256 9b3676de5512409887f372ba708c57ab0a42e3c61f028901c53fef79dd9c62d6"
+    },
+    {
+      "id": 57876119,
+      "method": "rrf_mfinput_sqrtseconds_16_10",
+      "status": "COMPLETE",
+      "public_score": "0.37648",
+      "private_score": "0.35907",
+      "date": "2026-11-01T15:24:23.4Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_sqrtseconds_16_10 | sha256 ea5dd1b43ad51294feb484ca401fbc7f80c156112a88eae93db8ecd4e64eafce"
+    },
+    {
+      "id": 57876122,
+      "method": "rrf_mfinput_sqrtseconds_16_50",
+      "status": "COMPLETE",
+      "public_score": "0.37077",
+      "private_score": "0.34829",
+      "date": "2026-11-01T15:24:31.78Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_sqrtseconds_16_50 | sha256 338287b8ae8d1ad9c04d5fd7c9774e157222bc3aa342b28c9031579f4657fdf8"
+    },
+    {
+      "id": 57876125,
+      "method": "mfinput_sqrtseconds_32",
+      "status": "COMPLETE",
+      "public_score": "0.30418",
+      "private_score": "0.28086",
+      "date": "2026-11-01T15:24:40.133Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfinput_sqrtseconds_32 | sha256 560914ce78d365fc34e4ec480aad881cd7bf2e2510d2fe0fcca2b9f6a3a0d2e0"
+    },
+    {
+      "id": 57876130,
+      "method": "rrf_mfinput_sqrtseconds_32_10",
+      "status": "COMPLETE",
+      "public_score": "0.37824",
+      "private_score": "0.36076",
+      "date": "2026-11-01T15:24:48.447Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_sqrtseconds_32_10 | sha256 b31e222555cf17b15cbaaaa90c0ca48e83e08268879af8781daf6c82f56e8629"
+    },
+    {
+      "id": 57876133,
+      "method": "rrf_mfinput_sqrtseconds_32_50",
+      "status": "COMPLETE",
+      "public_score": "0.36694",
+      "private_score": "0.34387",
+      "date": "2026-11-01T15:24:56.943Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_mfinput_sqrtseconds_32_50 | sha256 5aebbb1aaf05a6f6db1afa30ca1ee2ad775070c4cfdb7dac46bce5c568a2826f"
+    },
+    {
+      "id": 57876142,
+      "method": "rrf_joint_nmf32_watches_original",
+      "status": "COMPLETE",
+      "public_score": "0.38544",
+      "private_score": "0.36565",
+      "date": "2026-11-01T15:25:29.99Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf32_watches_original | sha256 16384a2c51eab90d3593dd5fa6e5f33a210634532db159b94daba549661687ab"
+    },
+    {
+      "id": 57876146,
+      "method": "rrf_joint_nmf32_watches_engagement",
+      "status": "COMPLETE",
+      "public_score": "0.37884",
+      "private_score": "0.35874",
+      "date": "2026-11-01T15:25:38.433Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf32_watches_engagement | sha256 ad09c1e401b41ab4099bea788b5eac9826672e685e0ad0a87ee45c938035c885"
+    },
+    {
+      "id": 57876152,
+      "method": "joint_nmf32_seconds",
+      "status": "COMPLETE",
+      "public_score": "0.31416",
+      "private_score": "0.29232",
+      "date": "2026-11-01T15:25:46.573Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 joint_nmf32_seconds | sha256 67136f82343fa4e7b32acb7926bec6bb2cb32a4e9003f7c2b7e49ce7d7feecac"
+    },
+    {
+      "id": 57876155,
+      "method": "rrf_joint_nmf32_seconds_original",
+      "status": "COMPLETE",
+      "public_score": "0.37964",
+      "private_score": "0.36189",
+      "date": "2026-11-01T15:25:55.09Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf32_seconds_original | sha256 1727e84e8763db3d525b8c11511ac82a84580aab540c68cb914f1d66d4a6f8bc"
+    },
+    {
+      "id": 57876158,
+      "method": "rrf_joint_nmf32_seconds_engagement",
+      "status": "COMPLETE",
+      "public_score": "0.37572",
+      "private_score": "0.35516",
+      "date": "2026-11-01T15:26:02.953Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf32_seconds_engagement | sha256 d89b989508704f0ce415782285e7e6ada9937e8ecd1378aa38816ed6561f5747"
+    },
+    {
+      "id": 57876160,
+      "method": "joint_nmf32_mean",
+      "status": "COMPLETE",
+      "public_score": "0.35505",
+      "private_score": "0.33611",
+      "date": "2026-11-01T15:26:11.007Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 joint_nmf32_mean | sha256 b3fa5ee7c8cf4ce854a77f1c7455cb5fe0bd9e4dcab9d87945618e4e3af892f3"
+    },
+    {
+      "id": 57876162,
+      "method": "rrf_joint_nmf32_mean_original",
+      "status": "COMPLETE",
+      "public_score": "0.38278",
+      "private_score": "0.36377",
+      "date": "2026-11-01T15:26:18.69Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf32_mean_original | sha256 76dba1d34ca1f23d39262617f3b304a225938f31b86b258a5cc9ca7f3cfbdd87"
+    },
+    {
+      "id": 57876167,
+      "method": "rrf_joint_nmf32_mean_engagement",
+      "status": "COMPLETE",
+      "public_score": "0.37786",
+      "private_score": "0.35648",
+      "date": "2026-11-01T15:26:26.52Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf32_mean_engagement | sha256 fea63f2ed786180317754aa369c059665b6e437611310e4c207a47ff526f9326"
+    },
+    {
+      "id": 57876169,
+      "method": "count_nmf_frob32",
+      "status": "COMPLETE",
+      "public_score": "0.39471",
+      "private_score": "0.37679",
+      "date": "2026-11-01T15:26:34.517Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 count_nmf_frob32 | sha256 6d36a240e325e46bcd6eb72e1c8e2081531e26d67854fd0b3c78e012ad11485f"
+    },
+    {
+      "id": 57876172,
+      "method": "rrf_count_nmf_frob32_original",
+      "status": "COMPLETE",
+      "public_score": "0.38552",
+      "private_score": "0.36719",
+      "date": "2026-11-01T15:26:42.227Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_count_nmf_frob32_original | sha256 390a6c4ee0317ba0e8d33a60a10863cdf5000a2f6da0c33e55d66a79cd7c3ecc"
+    },
+    {
+      "id": 57876176,
+      "method": "rrf_count_nmf_frob32_engagement",
+      "status": "COMPLETE",
+      "public_score": "0.37886",
+      "private_score": "0.36204",
+      "date": "2026-11-01T15:26:49.767Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_count_nmf_frob32_engagement | sha256 1c9fee6a902a8b1ada3ccee04ee1e5d0803bbec896dd16ead1943b4beb500130"
+    },
+    {
+      "id": 57876180,
+      "method": "joint_nmf64_watches",
+      "status": "COMPLETE",
+      "public_score": "0.37688",
+      "private_score": "0.36322",
+      "date": "2026-11-01T15:26:57.59Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 joint_nmf64_watches | sha256 0d556a08cda2d2b36b15a7df3302a92d02fa5181c8b4d707674d16a3b6ff026d"
+    },
+    {
+      "id": 57876186,
+      "method": "rrf_joint_nmf64_watches_original",
+      "status": "COMPLETE",
+      "public_score": "0.38159",
+      "private_score": "0.36347",
+      "date": "2026-11-01T15:27:05.327Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf64_watches_original | sha256 f2ce635eb2b8ef22af3d7de9170295329d2e75b47edd50d5504e5872feb12712"
+    },
+    {
+      "id": 57876196,
+      "method": "rrf_joint_nmf64_watches_engagement",
+      "status": "COMPLETE",
+      "public_score": "0.37673",
+      "private_score": "0.35579",
+      "date": "2026-11-01T15:27:13.887Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf64_watches_engagement | sha256 b53e0941980e3cd297648cec4f4174f77df7eef3feaac8000762fbf1c7a2032a"
+    },
+    {
+      "id": 57876198,
+      "method": "joint_nmf64_seconds",
+      "status": "COMPLETE",
+      "public_score": "0.29786",
+      "private_score": "0.28252",
+      "date": "2026-11-01T15:27:21.683Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 joint_nmf64_seconds | sha256 f3a3ffa4d43b17b07a2a64ab435bb2a5d639d0a5e1b6b506fafdb705a17a8035"
+    },
+    {
+      "id": 57876202,
+      "method": "rrf_joint_nmf64_seconds_original",
+      "status": "COMPLETE",
+      "public_score": "0.37871",
+      "private_score": "0.36192",
+      "date": "2026-11-01T15:27:29.48Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf64_seconds_original | sha256 4b3931ee937e0ac0b51b486bcd7226a215313d6596fb8d11fac76fb9e6c0791f"
+    },
+    {
+      "id": 57876210,
+      "method": "rrf_joint_nmf64_seconds_engagement",
+      "status": "COMPLETE",
+      "public_score": "0.37558",
+      "private_score": "0.35383",
+      "date": "2026-11-01T15:27:37.033Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf64_seconds_engagement | sha256 63c2f5ece6e66cd66159d99318f3c1d5a4503f9baf4f3ebfa047a237cc8dedde"
+    },
+    {
+      "id": 57876213,
+      "method": "joint_nmf64_mean",
+      "status": "COMPLETE",
+      "public_score": "0.34186",
+      "private_score": "0.32940",
+      "date": "2026-11-01T15:27:44.577Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 joint_nmf64_mean | sha256 e9bb6b3eae5f93118989e86e842213dd0faf1f64f50b479537805a46ce5c7ccf"
+    },
+    {
+      "id": 57876216,
+      "method": "rrf_joint_nmf64_mean_original",
+      "status": "COMPLETE",
+      "public_score": "0.38094",
+      "private_score": "0.36267",
+      "date": "2026-11-01T15:27:52.45Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf64_mean_original | sha256 55f3bbd42f3a7249db0909003b130e987b52d5e4e5fdaba7326e9cfc50a39032"
+    },
+    {
+      "id": 57876220,
+      "method": "rrf_joint_nmf64_mean_engagement",
+      "status": "COMPLETE",
+      "public_score": "0.37582",
+      "private_score": "0.35448",
+      "date": "2026-11-01T15:27:59.873Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_joint_nmf64_mean_engagement | sha256 e0d52475b0db3c5e4df771c772f198032ab0fe5cd1119259b727dcbc0e0c4629"
+    },
+    {
+      "id": 57876227,
+      "method": "count_nmf_frob64",
+      "status": "COMPLETE",
+      "public_score": "0.38174",
+      "private_score": "0.36582",
+      "date": "2026-11-01T15:28:07.323Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 count_nmf_frob64 | sha256 64f77bddfdeccee7fd4111e5c67239d3130191b1433b112abeef1532255be116"
+    },
+    {
+      "id": 57876231,
+      "method": "rrf_count_nmf_frob64_original",
+      "status": "COMPLETE",
+      "public_score": "0.38288",
+      "private_score": "0.36331",
+      "date": "2026-11-01T15:28:14.79Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_count_nmf_frob64_original | sha256 2f734bba2fd6e79f9b086cce970ebf53f69565764e5fd9e0fa56c05364079c16"
+    },
+    {
+      "id": 57876234,
+      "method": "rrf_count_nmf_frob64_engagement",
+      "status": "COMPLETE",
+      "public_score": "0.37568",
+      "private_score": "0.35651",
+      "date": "2026-11-01T15:28:22.143Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 rrf_count_nmf_frob64_engagement | sha256 99d46407172510b7c0ead93519acba6507550df8393ecf8b846ef64bd3e020f7"
+    },
+    {
+      "id": 57876245,
+      "method": "intensity_rate_mf64_10",
+      "status": "COMPLETE",
+      "public_score": "0.38323",
+      "private_score": "0.36463",
+      "date": "2026-11-01T15:28:42.933Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 intensity_rate_mf64_10 | sha256 0d2baf0c88828d245d530bfb75b86e206e58a513c6fe2cfd355ef6caed1f9da9"
+    },
+    {
+      "id": 57876251,
+      "method": "intensity_rate_mix_seconds_50_mf16_25",
+      "status": "COMPLETE",
+      "public_score": "0.40121",
+      "private_score": "0.38402",
+      "date": "2026-11-01T15:28:50.353Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 intensity_rate_mix_seconds_50_mf16_25 | sha256 a4ee8485882074716e075e7239f3b95e093d130afab397f46270516e13ff9752"
+    },
+    {
+      "id": 57876255,
+      "method": "intensity_history_watches_mf16_25",
+      "status": "COMPLETE",
+      "public_score": "0.39637",
+      "private_score": "0.37818",
+      "date": "2026-11-01T15:28:58.223Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 intensity_history_watches_mf16_25 | sha256 7bd51a9b80e1679154edbe12cc8e67b2af84f5e1b28d1adde8121c952a7c1e77"
+    },
+    {
+      "id": 57876276,
+      "method": "joint_nmf32_watches",
+      "status": "COMPLETE",
+      "public_score": "0.38915",
+      "private_score": "0.37135",
+      "date": "2026-11-01T15:29:44.653Z",
+      "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 joint_nmf32_watches | sha256 48ab2e9ac3b7b74c4f1319824962a0c5ca7935818cbce943020a48d276dab80b"
+    }
+  ]
+}

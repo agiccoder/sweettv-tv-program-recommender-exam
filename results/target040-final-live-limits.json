@@ -1,0 +1,10 @@
+{
+  "observed_utc": "2026-11-01T15:30:22.059424+00:00",
+  "official_endpoint": "https://www.kaggle.com/api/v1/competitions/sweettv-tv-program-recommender/submissions/limits",
+  "response": {
+    "numToday": 100,
+    "numTotal": 102,
+    "numAllowedNow": 0,
+    "limitedByTotal": false
+  }
+}

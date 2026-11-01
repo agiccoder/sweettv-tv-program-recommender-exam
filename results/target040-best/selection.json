@@ -1,0 +1,53 @@
+{
+  "selected_method": "mfshare_rate_16_50",
+  "selected_specification": {
+    "name": "mfshare_rate_16_50",
+    "kind": "rank_fusion",
+    "components": [
+      "rate_mix_seconds_50",
+      "count_nmf16"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "qualifying_family": "PPR/implicit MF hybrid or implicit MF with auxiliary history"
+  },
+  "selection_type": "predeclared verification portfolio",
+  "selection_rule": {
+    "type": "User-authorized finite locally evaluated portfolio",
+    "criterion": "Complete predeclared MF/PPR strength ablation; retain both proxies, rank/family differences and all negative results. Never optimize against returned scores.",
+    "external_feedback": "Batch01 best private .37949 is visible; further evaluation is not independent. Grid and all25 candidates frozen before their new local or private scores. No individual-user probing.",
+    "ordering": [
+      "mfshare_rate_16_50",
+      "mfshare_rate_16_75",
+      "mfshare_rate_32_50",
+      "mfshare_rate_32_75",
+      "mfshare_rate_64_50",
+      "mfshare_rate_64_75",
+      "mfshare_eng_16_50",
+      "mfshare_eng_16_75",
+      "mfshare_eng_32_50",
+      "mfshare_eng_32_75",
+      "mfshare_eng_64_50",
+      "mfshare_eng_64_75",
+      "mfshare_history_16_50",
+      "mfshare_history_16_75",
+      "mfshare_history_32_50",
+      "mfshare_history_32_75",
+      "mfshare_history_64_50",
+      "mfshare_history_64_75",
+      "mfshare_v2_16_50",
+      "mfshare_v2_16_75",
+      "mfshare_v2_32_50",
+      "mfshare_v2_32_75",
+      "mfshare_v2_64_50",
+      "mfshare_v2_64_75",
+      "count_nmf16"
+    ]
+  },
+  "source_local_protocols": [
+    "New rank-only temporal comparison on existing frozen native scores; no additional fitting on held-out views."
+  ],
+  "kaggle_scores_used": false
+}

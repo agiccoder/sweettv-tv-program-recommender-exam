@@ -1,0 +1,8 @@
+{
+  "frozen_utc": "2026-11-01T15:11:04.997143+00:00",
+  "config_path": "config/target040-round11.json",
+  "sha256": "5f2bfd179d8a008567000e29111a44698aa2783b898375fe3e77241247f7aecf",
+  "finite_methods": 31,
+  "new_quality_metrics_computed": false,
+  "hypothesis": "Finite implicit MF input ablation: reduce heavy-tail intensity or retain activity weighting; compare square-root count, unnormalized count, and square-root seconds at inherited ranks16/32."
+}

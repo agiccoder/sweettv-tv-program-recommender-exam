@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "scope": "Offline mocked parser check against preserved authentic57-record response; no new API request or upload",
+  "unique_IDs": 57,
+  "legacy_integer_page_loop_removed": true,
+  "private_past_evidence_files_optional_for_fresh_checkout": true,
+  "scripts": {
+    "scripts/target040_kaggle.py": "16f6e45f15ff8a4f07abc7e7f9afe31862b5e7f140d80df81455bbecfce6453d",
+    "scripts/submit_target040_portfolio_serial.py": "efca02da0b9ac40bf821d71c3d540f86ab912b9c0911c5d9aa2960e8bea931a2"
+  }
+}

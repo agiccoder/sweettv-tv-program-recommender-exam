@@ -1,0 +1,576 @@
+{
+  "protocol_id": "target040-round08-schedule-conditioned-cold-mf",
+  "revision": 1,
+  "seed": 20261030,
+  "frozen_before_new_v3_quality_metrics": true,
+  "scope": "Finite inductive-MF support ablation: historical schedule regression to fixed MF16 item factors, cold factor shrinkage, unchanged known factors and two already evaluated fixed PPR parents.",
+  "slices": [
+    {
+      "name": "weeks12",
+      "train_start": "2020-03-09T00:00:00",
+      "train_end": "2020-05-04T00:00:00",
+      "target_end": "2020-07-27T00:00:00"
+    },
+    {
+      "name": "late8",
+      "train_start": "2020-03-09T00:00:00",
+      "train_end": "2020-06-01T00:00:00",
+      "target_end": "2020-07-27T00:00:00"
+    },
+    {
+      "name": "late6",
+      "train_start": "2020-03-09T00:00:00",
+      "train_end": "2020-06-15T00:00:00",
+      "target_end": "2020-07-27T00:00:00"
+    }
+  ],
+  "final": {
+    "train_start": "2020-03-09T00:00:00",
+    "train_end": "2020-07-27T00:00:00",
+    "target_end": "2020-10-19T00:00:00"
+  },
+  "time_coordinate": "Original naive source wall clock; UTC encoding is arithmetic/display only, no inferred timezone",
+  "dependence": "Overlapping previously observed calendar periods; these are not independent untouched tests. Later cutoffs newly evaluated with this frozen model list.",
+  "threshold_seconds": 120,
+  "repeat_policy": "allow",
+  "candidate_policy": "All positive-duration labelled programmes overlapping each target schedule; identical pool for all methods",
+  "cohort": "Original template order, users with at least one eligible accepted held-out item, fixed once before method scoring; includes cold users",
+  "targets": {
+    "primary": "At most5 eligible unique items by summed accepted seconds descending, ID ascending ties",
+    "secondary": "At most5 eligible unique items by accepted canonical-airing count descending, ID ascending ties",
+    "all_observed": "All eligible accepted held-out IDs, separate diagnostic",
+    "empty": "AP=0 convention; no-target users excluded once per slice"
+  },
+  "methods": [
+    {
+      "name": "popularity",
+      "kind": "popularity"
+    },
+    {
+      "name": "content",
+      "kind": "content"
+    },
+    {
+      "name": "ppr_v2",
+      "kind": "ppr_v2",
+      "alpha": 0.25,
+      "seed_signal": "seconds",
+      "seed_power": 0.5
+    },
+    {
+      "name": "history_watches",
+      "kind": "history",
+      "signal": "watches"
+    },
+    {
+      "name": "ppr_mix_rw_75",
+      "kind": "mixed_ppr",
+      "count_signal": "recent_watches",
+      "count_share": 0.75,
+      "alpha": 0.1,
+      "qualifying_family": "personalized PageRank"
+    },
+    {
+      "name": "rate_mix_seconds_50",
+      "kind": "exposure_adjusted",
+      "base_component": "ppr_mix_rw_75",
+      "exposure_measure": "seconds",
+      "rate_power": 0.5,
+      "qualifying_family": "PPR hybrid with availability-rate reranking"
+    },
+    {
+      "name": "count_nmf16",
+      "kind": "count_nmf",
+      "factors": 16,
+      "qualifying_family": "implicit count-intensity matrix factorization"
+    },
+    {
+      "name": "rrf_ppr_nmf16_10",
+      "kind": "rank_fusion",
+      "components": [
+        "rate_mix_seconds_50",
+        "count_nmf16"
+      ],
+      "weights": [
+        0.9,
+        0.1
+      ],
+      "qualifying_family": "implicit MF hybrid with PPR/auxiliary history"
+    },
+    {
+      "name": "eng_ppr_recent_capped600",
+      "kind": "engagement_ppr",
+      "count_signal": "recent_capped600",
+      "count_share": 1.0,
+      "alpha": 0.1,
+      "qualifying_family": "personalized PageRank with accepted-airing engagement restart"
+    },
+    {
+      "name": "eng_rate_recent_capped600",
+      "kind": "exposure_adjusted",
+      "base_component": "eng_ppr_recent_capped600",
+      "exposure_measure": "seconds",
+      "rate_power": 0.5,
+      "qualifying_family": "PPR hybrid with fixed availability-rate reranking"
+    },
+    {
+      "name": "eng_rrf_recent_capped600",
+      "kind": "rank_fusion",
+      "components": [
+        "eng_rate_recent_capped600",
+        "count_nmf16"
+      ],
+      "weights": [
+        0.9,
+        0.1
+      ],
+      "qualifying_family": "PPR/implicit MF hybrid"
+    },
+    {
+      "name": "ind_mf_a1_c25",
+      "kind": "inductive_mf",
+      "base_component": "count_nmf16",
+      "ridge_alpha": 1.0,
+      "cold_scale": 0.25,
+      "qualifying_family": "implicit MF with schedule-conditioned cold-item factors"
+    },
+    {
+      "name": "ind_rrf_original_a1_c25",
+      "kind": "rank_fusion",
+      "components": [
+        "rate_mix_seconds_50",
+        "ind_mf_a1_c25"
+      ],
+      "weights": [
+        0.9,
+        0.1
+      ],
+      "qualifying_family": "PPR/inductive implicit MF hybrid"
+    },
+    {
+      "name": "ind_rrf_engagement_a1_c25",
+      "kind": "rank_fusion",
+      "components": [
+        "eng_rate_recent_capped600",
+        "ind_mf_a1_c25"
+      ],
+      "weights": [
+        0.9,
+        0.1
+      ],
+      "qualifying_family": "PPR/inductive implicit MF hybrid"
+    },
+    {
+      "name": "ind_mf_a1_c100",
+      "kind": "inductive_mf",
+      "base_component": "count_nmf16",
+      "ridge_alpha": 1.0,
+      "cold_scale": 1.0,
+      "qualifying_family": "implicit MF with schedule-conditioned cold-item factors"
+    },
+    {
+      "name": "ind_rrf_original_a1_c100",
+      "kind": "rank_fusion",
+      "components": [
+        "rate_mix_seconds_50",
+        "ind_mf_a1_c100"
+      ],
+      "weights": [
+        0.9,
+        0.1
+      ],
+      "qualifying_family": "PPR/inductive implicit MF hybrid"
+    },
+    {
+      "name": "ind_rrf_engagement_a1_c100",
+      "kind": "rank_fusion",
+      "components": [
+        "eng_rate_recent_capped600",
+        "ind_mf_a1_c100"
+      ],
+      "weights": [
+        0.9,
+        0.1
+      ],
+      "qualifying_family": "PPR/inductive implicit MF hybrid"
+    },
+    {
+      "name": "ind_mf_a10_c25",
+      "kind": "inductive_mf",
+      "base_component": "count_nmf16",
+      "ridge_alpha": 10.0,
+      "cold_scale": 0.25,
+      "qualifying_family": "implicit MF with schedule-conditioned cold-item factors"
+    },
+    {
+      "name": "ind_rrf_original_a10_c25",
+      "kind": "rank_fusion",
+      "components": [
+        "rate_mix_seconds_50",
+        "ind_mf_a10_c25"
+      ],
+      "weights": [
+        0.9,
+        0.1
+      ],
+      "qualifying_family": "PPR/inductive implicit MF hybrid"
+    },
+    {
+      "name": "ind_rrf_engagement_a10_c25",
+      "kind": "rank_fusion",
+      "components": [
+        "eng_rate_recent_capped600",
+        "ind_mf_a10_c25"
+      ],
+      "weights": [
+        0.9,
+        0.1
+      ],
+      "qualifying_family": "PPR/inductive implicit MF hybrid"
+    },
+    {
+      "name": "ind_mf_a10_c100",
+      "kind": "inductive_mf",
+      "base_component": "count_nmf16",
+      "ridge_alpha": 10.0,
+      "cold_scale": 1.0,
+      "qualifying_family": "implicit MF with schedule-conditioned cold-item factors"
+    },
+    {
+      "name": "ind_rrf_original_a10_c100",
+      "kind": "rank_fusion",
+      "components": [
+        "rate_mix_seconds_50",
+        "ind_mf_a10_c100"
+      ],
+      "weights": [
+        0.9,
+        0.1
+      ],
+      "qualifying_family": "PPR/inductive implicit MF hybrid"
+    },
+    {
+      "name": "ind_rrf_engagement_a10_c100",
+      "kind": "rank_fusion",
+      "components": [
+        "eng_rate_recent_capped600",
+        "ind_mf_a10_c100"
+      ],
+      "weights": [
+        0.9,
+        0.1
+      ],
+      "qualifying_family": "PPR/inductive implicit MF hybrid"
+    }
+  ],
+  "selection": {
+    "slice_score": ".5*MAP_Top5_seconds + .5*MAP_Top5_watches",
+    "aggregate": "Unweighted arithmetic mean of three slice scores; all methods must complete all3 slices",
+    "tie_order": [
+      "eng_rrf_recent_capped600",
+      "popularity",
+      "content",
+      "ppr_v2",
+      "history_watches",
+      "ppr_mix_rw_75",
+      "rate_mix_seconds_50",
+      "count_nmf16",
+      "rrf_ppr_nmf16_10",
+      "eng_ppr_recent_capped600",
+      "eng_rate_recent_capped600",
+      "ind_mf_a1_c25",
+      "ind_rrf_original_a1_c25",
+      "ind_rrf_engagement_a1_c25",
+      "ind_mf_a1_c100",
+      "ind_rrf_original_a1_c100",
+      "ind_rrf_engagement_a1_c100",
+      "ind_mf_a10_c25",
+      "ind_rrf_original_a10_c25",
+      "ind_rrf_engagement_a10_c25",
+      "ind_mf_a10_c100",
+      "ind_rrf_original_a10_c100",
+      "ind_rrf_engagement_a10_c100"
+    ],
+    "replacement": "Maximum exact mean dual proxy; replace engagement reference only with higher mean and >=2/3 strict wins. Keep locally best designation independent of returned private scores.",
+    "refit": "Persist exactly one final selected specification before full-history refit",
+    "kaggle_scores_used_as_objective": false,
+    "reference_method": "eng_rrf_recent_capped600"
+  },
+  "context": {
+    "weekday_bins": 7,
+    "hour_bin_width": 4,
+    "hour_bins_per_day": 6,
+    "channel_vocabulary": "Only channels with positive clipped historical views at that cutoff",
+    "history": "Union raw intervals per user/channel, clip to train bounds, split at4h/calendar-day boundaries; include unlabelled, ambiguous and outside-schedule viewing without assigning programme IDs",
+    "profile": "C[u,channel,weekday,hour4]=unioned historical seconds; G=sum_u C / sum_u,total C",
+    "smoothing_seconds": 21600,
+    "posterior": "(C_u +21600*G)/(total_C_u+21600); raw-history-empty users have no native context list and use common popularity fallback",
+    "schedule": "Same channel_segments resolution as original join, clip to target window; duplicates/same-item overlaps unioned, conflicting nonzero seconds excluded",
+    "candidate_feature": "A[item,slot]=unique nonconflicting labelled broadcast seconds in slot / total such seconds for item; aggregate across channels/airings",
+    "score": "dot(posterior_u,A_item); duration-weighted MEAN availability fit. Total length/repeat count is normalized away; duplicate rows never boost score. This is availability affinity, not observed future watching",
+    "future_fields_used": [
+      "item_id",
+      "channel",
+      "start",
+      "duration"
+    ],
+    "future_content_attributes_used": false
+  },
+  "recency": {
+    "half_life_days": 28,
+    "formula": "Sum accepted_airing_seconds *2**(-(train_cutoff-last_clipped_positive_overlap_end)/(28*86400)) per user/item; threshold fragments before decay",
+    "last_event_end_must_not_exceed_cutoff": true
+  },
+  "fusion": {
+    "rrf_constant": 60,
+    "history_components": [
+      "seconds",
+      "watches",
+      "recent_seconds"
+    ],
+    "history_weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "native_top_n": 50,
+    "history_fusion": "Sum equal weighted reciprocal ranks from each history native top50; component absence contributes0; no per-item weight renormalization",
+    "hybrid": "Weighted reciprocal ranks of PPR-v2 top50, history_fusion over its <=150 union, and channel_time top50",
+    "retrieval_union": "Union PPR top50, EACH history top50, channel top50, plus ALS32 top50 for ALS hybrid, intersect common pool",
+    "max_union_items": 300,
+    "ordinary_union_structural_bound": 250,
+    "als_union_structural_bound": 300,
+    "collaborative_als_formula": ".5*(1/(60+rank_PPR) +1/(60+rank_ALS32)); final=.50*collaborative +.25/(60+rank_history_fusion)+.25/(60+rank_channel)",
+    "missing_component": "Zero contribution, fixed weights not renormalized, no popularity padding before any fusion",
+    "ties": "Score descending then programme ID ascending",
+    "fallback": "After native/fused ranking append distinct training-viewer-popularity candidates; ID ascending ties. Truly no-history users use same fallback everywhere"
+  },
+  "graph": {
+    "X": "log1p(sum accepted seconds) normalized L1 by user",
+    "C": "X.T@X in item-row blocks; diagonal ignored after normalization",
+    "support": "Distinct positive-history user co-occurrence count from binary user/item matrix",
+    "cosine": "Sij=Cij/sqrt(Cii*Cjj), support>=2, i!=j",
+    "lift": "Sij=n_training_users*Cij/((sum_u Xui+1)*(sum_u Xuj+1)) * support_ij/(support_ij+10), support>=2, i!=j",
+    "minimum_support": 2,
+    "lift_mass_smoothing": 1.0,
+    "lift_support_shrinkage": 10.0,
+    "alpha": 0.25,
+    "restart": "L1 sqrt(accepted seconds), exactly v2",
+    "max_neighbors": 100,
+    "tolerance_l1": 1e-08,
+    "iteration_cap": 300,
+    "product_block_rows": 128,
+    "product_payload_budget_bytes": 67108864,
+    "max_training_items": 100000
+  },
+  "als": {
+    "package": "implicit",
+    "version": "0.7.3",
+    "implementation": "implicit.cpu.als.AlternatingLeastSquares",
+    "matrix_orientation": "CSR users x items",
+    "preference": "p_ui=1 for positive accepted-history pairs; unobserved p=0 with baseline confidence1, not a verified dislike",
+    "confidence": "Stored positive c_ui=1+40*log1p(accepted_seconds_ui/600); library alpha=1 to avoid multiplying twice",
+    "confidence_alpha": 40.0,
+    "seconds_scale": 600.0,
+    "library_alpha": 1.0,
+    "regularization": 0.1,
+    "iterations": 20,
+    "seed": 20261030,
+    "dtype": "float32",
+    "use_cg": true,
+    "cg_steps": 3,
+    "num_threads": 1,
+    "calculate_training_loss": true,
+    "repeats": "Explicit filter_already_liked_items=False in library API check; scoring all known candidate factors, never exclude history",
+    "native_scores": "Positive finite factor dot products, known train IDs only; unknown user/item => no invented factor and common fallback/context",
+    "save": "Local wrapper pickle plus official model.npz for fitted ALS states; controlled round-trip test",
+    "optional_failure": "Record real dependency/resource error; retain core experiments, exclude methods missing any slice from selection, never extend grid"
+  },
+  "segments": {
+    "short": "1..20 distinct accepted training programmes",
+    "medium": "21..99",
+    "long": ">=100",
+    "channel_only": "0 accepted programmes and positive raw context seconds",
+    "no_history": "0 accepted programmes and no raw context seconds",
+    "small_denominator_flag": "n<30",
+    "target_subsets": [
+      "seen by same user in train",
+      "absent from all train users"
+    ]
+  },
+  "bootstrap": {
+    "resamples": 2000,
+    "seed": 20261030,
+    "unit": "Same raw user ID resampled with identical multiplicity across overlapping slices",
+    "interval": [
+      0.025,
+      0.975
+    ],
+    "use": "Post-selection descriptive winner-v2 paired aggregate; does not correct selection bias and is not evidence of Kaggle gain"
+  },
+  "examples": [
+    "13571199046623737884",
+    "10120801182216576239"
+  ],
+  "resources": {
+    "threads": 1,
+    "max_peak_rss_bytes": 10737418240,
+    "max_method_wall_seconds": 600,
+    "max_configurations_per_slice": 23,
+    "max_total_evaluation_seconds": 2700,
+    "cache_policy": "Only same-cutoff same-config feature/graph/native-list reuse; never cross-slice fitting"
+  },
+  "external_uploads": "Authorized designated candidates only, after validation and local selection; account/rules/quota must be verified.",
+  "pdf_changes": false,
+  "no_new_quality_metrics_before_freeze": true,
+  "reference_method": "eng_rrf_recent_capped600",
+  "previous_config_sha256": "90b972f911ad0488b064165f563729b7fe0d8b11fd6ce08ad07ad8351b87d508",
+  "cache_run": "experiments/improvement-v3-20261101-01",
+  "prepared": "experiments/target040-transfer-data-01",
+  "freeze_evidence": "evidence/target040-01/round08-freeze.json",
+  "opportunity": {
+    "formula": "context_mean_affinity * (deduplicated nonconflicting total candidate broadcast seconds /3600)**airtime_power",
+    "powers": [
+      0.5,
+      1.0
+    ],
+    "ablation": "Existing exponent0 channel_time retained. Only candidate availability changes; raw training-only profile/smoothing/ID vocabulary unchanged.",
+    "fit": "No future viewing or future content attributes; schedule totals are allowed availability only. No fitting on labels.",
+    "zero_history": "No native list if no training raw context; common fallback"
+  },
+  "stopping_conditions": [
+    "Exactly23 configurations on3 already frozen overlapping long-history folds; fixed equal-fold dual proxy and >=2 strict wins, all serious exports audited, one different locally selected CSV, no duplicate upload."
+  ],
+  "mixed_restart": {
+    "formula": "v=(1-count_share)*L1(sqrt(accepted_seconds)) +count_share*L1(count_signal); row-normalize v defensively. Original co-view graph, dangling distribution, tolerance and top100 unchanged.",
+    "count_signals": [
+      "watches",
+      "recent_watches"
+    ],
+    "count_shares": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "alpha": 0.1,
+    "recency": "Use already prepared per-accepted-airing 28-day recent_watches with ends bounded by cutoff, not last-item timestamp.",
+    "hypothesis": "v3 duration-aware PPR/fusion beats watches on seconds; watches wins count proxy. Convex restart blends and two fixed RRF weights may improve their frozen compromise. Recency may downweight stale frequent programmes in the fixed heavy-user example.",
+    "external_feedback_disclosure": "v3 private .36630 was first observed and exact submitted bytes downloaded after round01 freeze. It confirms the target remains unmet; no returned score is used to fit or select this round."
+  },
+  "rate_features_root": "experiments/target040-transfer-exposure-01",
+  "rate_features_hashes": {
+    "final-target.json": "137a189276d606b66dae46c514df74286057c2220dd5034794406f039204f45c",
+    "final-train.json": "947b09beae231c4a9d07c25eef7504e6db61227606fa7bb250ddb0f20ec5e8a4",
+    "late6-target.json": "7239cad507469893cb80ecdaa6aa56297253a9e5d533eab727923968d9516e73",
+    "late6-train.json": "41ec34787f65706ebc7bd29069c4619db02633abb4ab815d3ac9045d3909dfd1",
+    "late8-target.json": "11c68f70b02a922fecbfeed9746f6f7218959b0496a3b95e908ae27ec22adbb0",
+    "late8-train.json": "2cb04772395dc5cc747bcf542ad9eb63c97be379862d24151726777342e6e89b",
+    "manifest.json": "05e21e7d36f2e05ed3869e76cc64f2102cca293fe8f022bb16431df4d7a098b1",
+    "weeks12-target.json": "f96ff8ed3c1d39a86c83e0b9fe4ecf3bd9110a1c273c22cb79cb86e67ef9431f",
+    "weeks12-train.json": "b0d0f72295739df7aa71324c46dc10ed8d5840039c855152b83eb2aed543ce42"
+  },
+  "exposure_rate": {
+    "formula": "score_base(u,i) * clip(((target_exposure_i+s)/target_days)/((historical_exposure_i+s)/train_days),.25,4)**power",
+    "powers": [
+      0.5,
+      1.0
+    ],
+    "exposure_measures": [
+      "seconds",
+      "airings"
+    ],
+    "smoothing": {
+      "seconds": 3600.0,
+      "airings": 1.0
+    },
+    "gain_clip": [
+      0.25,
+      4.0
+    ],
+    "canonical_airing": "Same-channel duplicate/overlap union, conflicting labelled seconds excluded. Count one canonical airing if its nonconflicting clipped labelled seconds >=120. Adjoining airings distinct.",
+    "source": "Historical/future schedule only: ID, channel, start and duration, no view behavior or future content attributes. Historical baseline uses only pre-cutoff schedule. Target exposure is known availability, not fitted preference.",
+    "retrieval": "Score all base-model known candidates, apply fixed availability gain, then native top50. Unknown CF items get no factor/score; shared fallback remains.",
+    "hypothesis": "Raw train favourite ranks ignore changing broadcast opportunity. Reused v3 watch-target misses have lower median future/historical airing-rate change than hits; apply bounded availability-rate reranking to independently evaluated PPR seeds.",
+    "diagnosis": "evidence/target040-01/exposure-rate-diagnosis.json",
+    "external_feedback": "Round02 locally selected candidate returned private .35452, below already verified v3 .36630. Rate features and error diagnosis were prepared separately; parameter choices and local objective do not optimize returned scores."
+  },
+  "count_nmf": {
+    "package": "scikit-learn",
+    "version": "1.6.1",
+    "class": "sklearn.decomposition.NMF",
+    "matrix": "CSR users x training items; q_ui=accepted_airing_count_ui / sum_j accepted_airing_count_uj",
+    "objective": "Generalized KL(q||WH) + .5*1e-6*n_items*||W||F^2 + .5*1e-6*n_users*||H||F^2, W,H>=0. This reconstructs nonnegative relative implicit count intensity, not fabricated explicit ratings.",
+    "unobserved": "Zero recorded intensity in the observed training log; no verified dislike. Equal observation/exposure is an approximation and zeros influence the KL objective.",
+    "regularization": "Low rank16/32, fixed small scaled L2 coefficient, iteration cap100 and training-only tolerance1e-4; no validation-based early stopping",
+    "factors": [
+      16,
+      32
+    ],
+    "solver": "mu",
+    "beta_loss": "kullback-leibler",
+    "init": "random",
+    "seed": 20261030,
+    "max_iter": 100,
+    "tol": 0.0001,
+    "alpha_W": 1e-06,
+    "alpha_H": 1e-06,
+    "l1_ratio": 0.0,
+    "dtype": "float64",
+    "repeats": "Allowed, no filtering of observed IDs",
+    "native": "Known training item factor products, finite positive scores only; no factors invented for unknown users/items",
+    "hybrids": "RRF parents = locally best availability-adjusted PPR and history_watches; MF weights .10/.25, fixed before metrics; no padding or per-candidate renormalization",
+    "hypothesis": "Binary preference ALS poorly recovers repeats. Direct relative count-intensity factorization may preserve preference strength and complement PPR/history.",
+    "diagnosis": "evidence/target040-01/previous-als-repeat-diagnosis.json",
+    "primary_api": "https://scikit-learn.org/1.6/modules/generated/sklearn.decomposition.NMF.html",
+    "external_feedback": "Round02 private .35452 and round03 .35327, both below existing v3 .36630; all retained. The new objective is motivated by local ALS repeat/ranking failures and uses the same frozen dual-proxy selection, not returned scores."
+  },
+  "reuse_cached_fits": false,
+  "external_feedback_disclosure": "Known real private results: v3 .36630, round02 .35452,03 .35327,04 .37018,07 .36363. Round05/06 identical bytes were not submitted. Round07 remains the local reference despite worse private feedback. Globally unseen held-out positions and missing-factor policy motivate this candidate-support hypothesis; private scores do not select alphas/shrinkage or parent.",
+  "engagement": {
+    "hypothesis": "Finite five-signal engagement ablation: capped10/30min, fraction, distinct active days, recent10min cap. Each auxiliary history, PPR and the same fixed availability/MF wrappers; no joint weight tuning.",
+    "feature_definition": "evidence/target040-01/round07-engagement-preparation-freeze.json",
+    "diagnosis": "evidence/target040-01/training-airing-duration-diagnosis.json",
+    "root": "experiments/target040-engagement-data-01",
+    "hashes": {
+      "database-hash-verification.json": "25f39907d598912886e0c47489eb4615d3b2f62021f896428e1e595c03dd9e7f",
+      "engagement-feature-audit.json": "e20930f0aadc94cc081954b5eb7acc12c09e4a1e4c24cd9f06fdbbb3503b68b9",
+      "full.parquet": "372d513f878e9e6b2984ecb24e695318c535e8ffbefdb4b64f704e664a124295",
+      "late6.parquet": "3df6bb3204933bfcceb6fa74d0c1d0e25c3bf1a47bd6f3251ce951b03ce6db53",
+      "late8.parquet": "00938d1c5feb37867aa0ca82dd5651ab2048cf9f84f9fdc0a94efa0da77894a5",
+      "weeks12.parquet": "d93cbd6befb1083d9aa428812ee6cf9080654c7b7c363dca61aa7bf625d7082e"
+    },
+    "acceptance": "Original120s canonical-airing rule unchanged; all seconds/counts exactly match old exports; no future viewing",
+    "PPR": "Same co-view transition, L1 engagement restart, alpha=.1; no new graph fitting or per-user hyperparameters"
+  },
+  "inductive_mf": {
+    "hypothesis": "Finite inductive-MF support ablation: historical schedule regression to fixed MF16 item factors, cold factor shrinkage, unchanged known factors and two already evaluated fixed PPR parents.",
+    "features": "Canonical broadcast hours per day in training-channel x weekday x4h slots; historical map fits before cutoff, target map uses allowed availability only",
+    "root": "experiments/target040-schedule-factors-01",
+    "hashes": {
+      "final-history.json": "d6f3b1c990f455f82e27f9afb64adb86d726de83aabce5933872b07f37ca1a0e",
+      "final-history.npz": "f57a5ed40db34152cc96ec5e7e39737cf2dbff468efecb7e2bf967ee2ea61ca7",
+      "late6-history.json": "f70668b45a269c1608b1186407bf1748e3833571a8a8afa7cb92f01f74163196",
+      "late6-history.npz": "5adca9a5b6d7e0b5cc496395148f7aba2c21f0495df30ef03e72dcafe1780f19",
+      "late8-history.json": "6d88dcff6130cf8128e60161d668b731f82b518a48fbf5f54087c96bfa8f07b8",
+      "late8-history.npz": "2c8ccb439ba6512cd8a2fb61b730d4df4b8411d49e310cef69b2fea8684ba595",
+      "manifest.json": "da287f385fa76767164eec9c99de9108213760a072ab99da3a2213a095d9bba3",
+      "weeks12-history.json": "434d10fa38150c93b54d4395e2c8a5aaf3f3f84cb91eadcde2cb17fe2ac37afa",
+      "weeks12-history.npz": "8ca9283db97b99e24daee9ffd136a6281727981ea025a934fc492d0bca1e0ed0"
+    },
+    "objective": "min_B ||X_history B - V_MF16||_F^2 + alpha ||B||_F^2, no intercept. For unknown programme IDs, V_new=gamma*max(0,X_target B); known factors retained exactly. Score=U_user dot V_item.",
+    "ridge_alphas": [
+      1.0,
+      10.0
+    ],
+    "cold_scales": [
+      0.25,
+      1.0
+    ],
+    "tol": 1e-06,
+    "max_iter": 1000,
+    "solver": "lsqr",
+    "library": "scikit-learn1.6.1",
+    "primary_reference": "https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.Ridge.html",
+    "interpretation": "Auxiliary schedule-conditioned factor extension of implicit MF; no future preference fitting or independent third-family claim."
+  }
+}

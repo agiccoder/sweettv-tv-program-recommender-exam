@@ -1,0 +1,11 @@
+{
+  "frozen_utc": "2026-11-01T13:33:02.991467+00:00",
+  "config_path": "config/target040-round06.json",
+  "sha256": "c60bdb13039d69505d0d4b4f9b9a0c6031b25de0c1ec4922685308a691776a6f",
+  "finite_methods": 16,
+  "new_round_quality_metrics_computed": false,
+  "original_methods_windows_unchanged_from_preparation_or_plan": true,
+  "feature_hashes_frozen": true,
+  "preparation_config_sha256": "90b972f911ad0488b064165f563729b7fe0d8b11fd6ce08ad07ad8351b87d508",
+  "hypothesis": "Finite normalized full-pool intensity mixtures vs RRF, with fixed count-MF16 and rank64 ablation."
+}

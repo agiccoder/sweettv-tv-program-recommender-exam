@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "path": "experiments/target040-reproduce-039000-01/submission.csv",
+  "sha256": "8b722b51734d6b7d6b46be0b563afce424dbbf5214dd7e18170ca82152b9b7e1",
+  "size_bytes": 76280,
+  "rows": 1260,
+  "expected_users": 1260,
+  "headers": [
+    "user_id",
+    "tv_show_id"
+  ],
+  "user_column": "user_id",
+  "prediction_column": "tv_show_id",
+  "recommendations_per_user": 5,
+  "candidate_count": 6632,
+  "distinct_recommended_programmes": 112,
+  "template_sha256": "d8c209dce3c7c9d815d8e2a6226e1be63052ee7afa7e8ba8b75dc2f703967a02",
+  "exact_expected_CSV_bytes_reproduced": true,
+  "fresh_refit_no_fitted_cache": true,
+  "model_roundtrip_passed": true,
+  "wall_seconds": 43.739045583,
+  "refit_freeze_sha256": "5db936508c2efaf2e35cca303d72d9341c284a028af38cd289c114d110dc2f6d",
+  "model_sha256": "5c0f8b37241b660aaa138527ef2c5f6621bf99799576546832d10ba4e498e223"
+}

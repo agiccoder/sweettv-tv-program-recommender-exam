@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-11-01T12:57:56.133664+00:00",
+  "config_path": "config/target040-round02.json",
+  "sha256": "aa1c1aa5bfa1dafb0a57ed749847144412529a84eb37979f5e54bb1e4a508bae",
+  "new_round_quality_metrics_computed": false,
+  "finite_methods": 16,
+  "prior_round": "experiments/target040-round01-20261101-01",
+  "reason": "v3 duration-aware PPR/fusion beats watches on seconds; watches wins count proxy. Convex restart blends and two fixed RRF weights may improve their frozen compromise. Recency may downweight stale frequent programmes in the fixed heavy-user example.",
+  "external_feedback_disclosed": "v3 private .36630 was first observed and exact submitted bytes downloaded after round01 freeze. It confirms the target remains unmet; no returned score is used to fit or select this round."
+}

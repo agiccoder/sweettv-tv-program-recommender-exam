@@ -1,0 +1,10 @@
+{
+  "event": "round05_windows_methods_frozen",
+  "frozen_utc": "2026-11-01T13:27:02.090766+00:00",
+  "config_path": "config/target040-round05-preparation.json",
+  "sha256": "90b972f911ad0488b064165f563729b7fe0d8b11fd6ce08ad07ad8351b87d508",
+  "new_round_quality_metrics_computed": false,
+  "methods": 16,
+  "hypothesis": "Finite transfer diagnosis: same16 previously defined models,12/8/6-week horizons and8/12/14-week training histories, vs20-week final history.",
+  "external_feedback_disclosure": "Observed v3 .36630; rounds02 .35452,03 .35327,04 .37018. Failure of local gains to transfer motivates training-history-length diagnosis. No new weights/models or private-score selection."
+}

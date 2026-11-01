@@ -1,0 +1,13 @@
+{
+  "frozen_utc": "2026-11-01T15:05:17.373695+00:00",
+  "config_path": "config/target040-portfolio02.json",
+  "sha256": "96499b0cfccaf8e8efd277500a1f5e4a58d3ad1c393bf56bed5b51a544363dc2",
+  "finite_candidates": 25,
+  "new_quality_metrics_computed": false,
+  "full_fit_reuse": "Same source/input/cutoff model states from portfolio01; exact prior CSV controls required.",
+  "local_sources": [
+    "experiments/target040-round05-20261101-01",
+    "experiments/target040-round06-20261101-01",
+    "experiments/target040-round07-20261101-01"
+  ]
+}

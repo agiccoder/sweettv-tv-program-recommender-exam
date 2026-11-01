@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-11-01T13:17:36.471250+00:00",
+  "config_path": "config/target040-round04.json",
+  "sha256": "7e2bb424a75a59b5e0f200dcb5b3a1e3ffc00a053f7aadde7688f2949d2d51d0",
+  "finite_methods": 16,
+  "new_round_quality_metrics_computed": false,
+  "diagnosis": "evidence/target040-01/previous-als-repeat-diagnosis.json",
+  "hypothesis": "Binary preference ALS poorly recovers repeats. Direct relative count-intensity factorization may preserve preference strength and complement PPR/history.",
+  "external_feedback_disclosure": "Round02 private .35452 and round03 .35327, both below existing v3 .36630; all retained. The new objective is motivated by local ALS repeat/ranking failures and uses the same frozen dual-proxy selection, not returned scores."
+}

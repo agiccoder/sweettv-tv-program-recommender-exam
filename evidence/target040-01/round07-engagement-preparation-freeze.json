@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-11-01T13:37:49.243382+00:00",
+  "scope": "Training-only feature preparation; no new model quality metrics",
+  "windows_from": "config/target040-round05-preparation.json",
+  "windows_source_sha256": "90b972f911ad0488b064165f563729b7fe0d8b11fd6ce08ad07ad8351b87d508",
+  "features": {
+    "capped600": "sum min(accepted canonical airing seconds/600,1)",
+    "capped1800": "sum min(accepted canonical airing seconds/1800,1)",
+    "fractional_watches": "sum min(accepted canonical airing seconds/canonical airing duration,1)",
+    "active_days": "number of distinct arithmetic source days with an accepted canonical airing; day defined by last clipped positive overlap end minus1 microsecond; union across channels",
+    "recent_capped600": "sum min(accepted canonical airing seconds/600,1)*2**(-(cutoff-last_overlap_end)/(28*86400))"
+  },
+  "acceptance": "Original120s per canonical airing, fragments/views unioned, conflicting labels excluded, threshold before transforms, original seconds/watches must match prepared exports exactly",
+  "limits": "Raw DB read-only; only training view times before each frozen cutoff; source/data hashes checked; no weeks31\u201342 viewing",
+  "diagnosis": "evidence/target040-01/training-airing-duration-diagnosis.json",
+  "model_trials": "Not yet evaluated. A separate finite model selection config must be frozen before any use of validation labels."
+}

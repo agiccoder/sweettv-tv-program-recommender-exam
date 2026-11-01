@@ -1,0 +1,11 @@
+{
+  "frozen_utc": "2026-11-01T13:33:02.988880+00:00",
+  "config_path": "config/target040-round05.json",
+  "sha256": "f4f319e4be7274faa4d2fb67ac73a3e980bf7f3bd6f76e3957ab0c7deb75bbaf",
+  "finite_methods": 16,
+  "new_round_quality_metrics_computed": false,
+  "original_methods_windows_unchanged_from_preparation_or_plan": true,
+  "feature_hashes_frozen": true,
+  "preparation_config_sha256": "90b972f911ad0488b064165f563729b7fe0d8b11fd6ce08ad07ad8351b87d508",
+  "hypothesis": "Finite transfer diagnosis: same16 previously defined models,12/8/6-week horizons and8/12/14-week training histories, vs20-week final history."
+}

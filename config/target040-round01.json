@@ -1,0 +1,309 @@
+{
+  "protocol_id": "target040-round01-opportunity",
+  "revision": 1,
+  "seed": 20261030,
+  "frozen_before_new_v3_quality_metrics": true,
+  "scope": "Finite opportunity-aware channel/PPR round; locally select before any authorized Kaggle verification; private objective >=.40000",
+  "slices": [
+    {
+      "name": "weeks5",
+      "train_start": "2020-03-09T00:00:00",
+      "train_end": "2020-04-13T00:00:00",
+      "target_end": "2020-05-18T00:00:00"
+    },
+    {
+      "name": "weeks10",
+      "train_start": "2020-03-09T00:00:00",
+      "train_end": "2020-04-20T00:00:00",
+      "target_end": "2020-06-29T00:00:00"
+    },
+    {
+      "name": "weeks12",
+      "train_start": "2020-03-09T00:00:00",
+      "train_end": "2020-05-04T00:00:00",
+      "target_end": "2020-07-27T00:00:00"
+    }
+  ],
+  "final": {
+    "train_start": "2020-03-09T00:00:00",
+    "train_end": "2020-07-27T00:00:00",
+    "target_end": "2020-10-19T00:00:00"
+  },
+  "time_coordinate": "Original naive source wall clock; UTC encoding is arithmetic/display only, no inferred timezone",
+  "dependence": "Target windows overlap and periods were partly inspected in v1/v2. Neither slices nor old confirmation are independent untouched tests.",
+  "threshold_seconds": 120,
+  "repeat_policy": "allow",
+  "candidate_policy": "All positive-duration labelled programmes overlapping each target schedule; identical pool for all methods",
+  "cohort": "Original template order, users with at least one eligible accepted held-out item, fixed once before method scoring; includes cold users",
+  "targets": {
+    "primary": "At most5 eligible unique items by summed accepted seconds descending, ID ascending ties",
+    "secondary": "At most5 eligible unique items by accepted canonical-airing count descending, ID ascending ties",
+    "all_observed": "All eligible accepted held-out IDs, separate diagnostic",
+    "empty": "AP=0 convention; no-target users excluded once per slice"
+  },
+  "methods": [
+    {
+      "name": "popularity",
+      "kind": "popularity"
+    },
+    {
+      "name": "content",
+      "kind": "content"
+    },
+    {
+      "name": "ppr_v2",
+      "kind": "ppr_v2",
+      "alpha": 0.25,
+      "seed_signal": "seconds",
+      "seed_power": 0.5
+    },
+    {
+      "name": "history_watches",
+      "kind": "history",
+      "signal": "watches"
+    },
+    {
+      "name": "channel_time",
+      "kind": "channel_time"
+    },
+    {
+      "name": "personal_history_fusion",
+      "kind": "history_fusion"
+    },
+    {
+      "name": "hybrid_70_20_10",
+      "kind": "hybrid",
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ]
+    },
+    {
+      "name": "channel_opportunity_sqrt",
+      "kind": "opportunity",
+      "airtime_power": 0.5,
+      "qualifying_family": null
+    },
+    {
+      "name": "hybrid_opportunity_sqrt_70_20_10",
+      "kind": "hybrid",
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "channel_component": "channel_opportunity_sqrt",
+      "qualifying_family": "PPR hybrid with auxiliary history and availability"
+    },
+    {
+      "name": "hybrid_opportunity_sqrt_80_15_05",
+      "kind": "hybrid",
+      "weights": [
+        0.8,
+        0.15,
+        0.05
+      ],
+      "channel_component": "channel_opportunity_sqrt",
+      "qualifying_family": "PPR hybrid with auxiliary history and availability"
+    },
+    {
+      "name": "channel_opportunity_total",
+      "kind": "opportunity",
+      "airtime_power": 1.0,
+      "qualifying_family": null
+    },
+    {
+      "name": "hybrid_opportunity_total_70_20_10",
+      "kind": "hybrid",
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "channel_component": "channel_opportunity_total",
+      "qualifying_family": "PPR hybrid with auxiliary history and availability"
+    },
+    {
+      "name": "hybrid_opportunity_total_80_15_05",
+      "kind": "hybrid",
+      "weights": [
+        0.8,
+        0.15,
+        0.05
+      ],
+      "channel_component": "channel_opportunity_total",
+      "qualifying_family": "PPR hybrid with auxiliary history and availability"
+    }
+  ],
+  "selection": {
+    "slice_score": ".5*MAP_Top5_seconds + .5*MAP_Top5_watches",
+    "aggregate": "Unweighted arithmetic mean of three slice scores; all methods must complete all3 slices",
+    "tie_order": [
+      "history_watches",
+      "popularity",
+      "content",
+      "ppr_v2",
+      "personal_history_fusion",
+      "channel_time",
+      "hybrid_70_20_10",
+      "channel_opportunity_sqrt",
+      "hybrid_opportunity_sqrt_70_20_10",
+      "hybrid_opportunity_sqrt_80_15_05",
+      "channel_opportunity_total",
+      "hybrid_opportunity_total_70_20_10",
+      "hybrid_opportunity_total_80_15_05"
+    ],
+    "replacement": "Choose highest exact mean dual-proxy across3 fixed folds, tie order fixed. Replace previous best history_watches only if higher mean and strictly wins>=2/3 slices; otherwise retain history_watches. No lower-ranked rescue.",
+    "refit": "Persist exactly one final selected specification before full-history refit",
+    "kaggle_scores_used_as_objective": false,
+    "reference_method": "history_watches"
+  },
+  "context": {
+    "weekday_bins": 7,
+    "hour_bin_width": 4,
+    "hour_bins_per_day": 6,
+    "channel_vocabulary": "Only channels with positive clipped historical views at that cutoff",
+    "history": "Union raw intervals per user/channel, clip to train bounds, split at4h/calendar-day boundaries; include unlabelled, ambiguous and outside-schedule viewing without assigning programme IDs",
+    "profile": "C[u,channel,weekday,hour4]=unioned historical seconds; G=sum_u C / sum_u,total C",
+    "smoothing_seconds": 21600,
+    "posterior": "(C_u +21600*G)/(total_C_u+21600); raw-history-empty users have no native context list and use common popularity fallback",
+    "schedule": "Same channel_segments resolution as original join, clip to target window; duplicates/same-item overlaps unioned, conflicting nonzero seconds excluded",
+    "candidate_feature": "A[item,slot]=unique nonconflicting labelled broadcast seconds in slot / total such seconds for item; aggregate across channels/airings",
+    "score": "dot(posterior_u,A_item); duration-weighted MEAN availability fit. Total length/repeat count is normalized away; duplicate rows never boost score. This is availability affinity, not observed future watching",
+    "future_fields_used": [
+      "item_id",
+      "channel",
+      "start",
+      "duration"
+    ],
+    "future_content_attributes_used": false
+  },
+  "recency": {
+    "half_life_days": 28,
+    "formula": "Sum accepted_airing_seconds *2**(-(train_cutoff-last_clipped_positive_overlap_end)/(28*86400)) per user/item; threshold fragments before decay",
+    "last_event_end_must_not_exceed_cutoff": true
+  },
+  "fusion": {
+    "rrf_constant": 60,
+    "history_components": [
+      "seconds",
+      "watches",
+      "recent_seconds"
+    ],
+    "history_weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "native_top_n": 50,
+    "history_fusion": "Sum equal weighted reciprocal ranks from each history native top50; component absence contributes0; no per-item weight renormalization",
+    "hybrid": "Weighted reciprocal ranks of PPR-v2 top50, history_fusion over its <=150 union, and channel_time top50",
+    "retrieval_union": "Union PPR top50, EACH history top50, channel top50, plus ALS32 top50 for ALS hybrid, intersect common pool",
+    "max_union_items": 300,
+    "ordinary_union_structural_bound": 250,
+    "als_union_structural_bound": 300,
+    "collaborative_als_formula": ".5*(1/(60+rank_PPR) +1/(60+rank_ALS32)); final=.50*collaborative +.25/(60+rank_history_fusion)+.25/(60+rank_channel)",
+    "missing_component": "Zero contribution, fixed weights not renormalized, no popularity padding before any fusion",
+    "ties": "Score descending then programme ID ascending",
+    "fallback": "After native/fused ranking append distinct training-viewer-popularity candidates; ID ascending ties. Truly no-history users use same fallback everywhere"
+  },
+  "graph": {
+    "X": "log1p(sum accepted seconds) normalized L1 by user",
+    "C": "X.T@X in item-row blocks; diagonal ignored after normalization",
+    "support": "Distinct positive-history user co-occurrence count from binary user/item matrix",
+    "cosine": "Sij=Cij/sqrt(Cii*Cjj), support>=2, i!=j",
+    "lift": "Sij=n_training_users*Cij/((sum_u Xui+1)*(sum_u Xuj+1)) * support_ij/(support_ij+10), support>=2, i!=j",
+    "minimum_support": 2,
+    "lift_mass_smoothing": 1.0,
+    "lift_support_shrinkage": 10.0,
+    "alpha": 0.25,
+    "restart": "L1 sqrt(accepted seconds), exactly v2",
+    "max_neighbors": 100,
+    "tolerance_l1": 1e-08,
+    "iteration_cap": 300,
+    "product_block_rows": 128,
+    "product_payload_budget_bytes": 67108864,
+    "max_training_items": 100000
+  },
+  "als": {
+    "package": "implicit",
+    "version": "0.7.3",
+    "implementation": "implicit.cpu.als.AlternatingLeastSquares",
+    "matrix_orientation": "CSR users x items",
+    "preference": "p_ui=1 for positive accepted-history pairs; unobserved p=0 with baseline confidence1, not a verified dislike",
+    "confidence": "Stored positive c_ui=1+40*log1p(accepted_seconds_ui/600); library alpha=1 to avoid multiplying twice",
+    "confidence_alpha": 40.0,
+    "seconds_scale": 600.0,
+    "library_alpha": 1.0,
+    "regularization": 0.1,
+    "iterations": 20,
+    "seed": 20261030,
+    "dtype": "float32",
+    "use_cg": true,
+    "cg_steps": 3,
+    "num_threads": 1,
+    "calculate_training_loss": true,
+    "repeats": "Explicit filter_already_liked_items=False in library API check; scoring all known candidate factors, never exclude history",
+    "native_scores": "Positive finite factor dot products, known train IDs only; unknown user/item => no invented factor and common fallback/context",
+    "save": "Local wrapper pickle plus official model.npz for fitted ALS states; controlled round-trip test",
+    "optional_failure": "Record real dependency/resource error; retain core experiments, exclude methods missing any slice from selection, never extend grid"
+  },
+  "segments": {
+    "short": "1..20 distinct accepted training programmes",
+    "medium": "21..99",
+    "long": ">=100",
+    "channel_only": "0 accepted programmes and positive raw context seconds",
+    "no_history": "0 accepted programmes and no raw context seconds",
+    "small_denominator_flag": "n<30",
+    "target_subsets": [
+      "seen by same user in train",
+      "absent from all train users"
+    ]
+  },
+  "bootstrap": {
+    "resamples": 2000,
+    "seed": 20261030,
+    "unit": "Same raw user ID resampled with identical multiplicity across overlapping slices",
+    "interval": [
+      0.025,
+      0.975
+    ],
+    "use": "Post-selection descriptive winner-v2 paired aggregate; does not correct selection bias and is not evidence of Kaggle gain"
+  },
+  "examples": [
+    "13571199046623737884",
+    "10120801182216576239"
+  ],
+  "resources": {
+    "threads": 1,
+    "max_peak_rss_bytes": 10737418240,
+    "max_method_wall_seconds": 600,
+    "max_configurations_per_slice": 13,
+    "max_total_evaluation_seconds": 1800,
+    "cache_policy": "Only same-cutoff same-config feature/graph/native-list reuse; never cross-slice fitting"
+  },
+  "external_uploads": "Authorized designated candidates only, after validation and local selection; account/rules/quota must be verified.",
+  "pdf_changes": false,
+  "no_new_quality_metrics_before_freeze": true,
+  "reference_method": "history_watches",
+  "previous_config_sha256": "f57fa9d65e4f3f255af92257b1a48d46d62bb173fd73091ea57ee58493d89774",
+  "cache_run": "experiments/improvement-v3-20261101-01",
+  "prepared": "experiments/improvement-v3-data-01",
+  "freeze_evidence": "evidence/target040-01/round01-freeze.json",
+  "opportunity": {
+    "formula": "context_mean_affinity * (deduplicated nonconflicting total candidate broadcast seconds /3600)**airtime_power",
+    "powers": [
+      0.5,
+      1.0
+    ],
+    "ablation": "Existing exponent0 channel_time retained. Only candidate availability changes; raw training-only profile/smoothing/ID vocabulary unchanged.",
+    "fit": "No future viewing or future content attributes; schedule totals are allowed availability only. No fitting on labels.",
+    "zero_history": "No native list if no training raw context; common fallback"
+  },
+  "stopping_conditions": [
+    "All13 frozen configurations evaluated on all3 reused folds, then one locally selected refit.",
+    "If no local improvement, preserve negative result and diagnose a distinct bounded next round.",
+    "Await real authentication/scoring while continuing local work. No success claim without linked completed private>=.40000."
+  ]
+}

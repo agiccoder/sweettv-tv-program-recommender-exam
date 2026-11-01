@@ -1,0 +1,24 @@
+{
+  "frozen_utc": "2026-11-01T14:47:52.538541+00:00",
+  "hypothesis": "Count-only MF favors the count proxy more than the seconds proxy. Shared-user multi-view factorization may recover complementary duration structure without discarding strong repeat counts.",
+  "parent_family": "implicit matrix factorization",
+  "input": "J=[.5 L1_user(accepted watches), .5 L1_user(accepted seconds)], two item blocks with a shared user factor matrix; train cutoff unchanged",
+  "objective": "Generalized-KL reconstruction of both blocks plus pinned sklearn NMF L2 regularization",
+  "fit_grid": {
+    "factors": [
+      32,
+      64
+    ],
+    "all_other_parameters": "Inherited fixed count_nmf settings, no new solver/seed/regularization search"
+  },
+  "score_views": [
+    "watches block",
+    "seconds block",
+    "equal full-common-pool normalized mean"
+  ],
+  "fixed_hybrids": "Each readout with each of the2 already evaluated PPR rate parents, fixed RRF weights.9/.1",
+  "windows": "Same3 overlapping weeks12/late8/late6 folds, never treated as independent tests",
+  "selection": "Frozen equal-fold .5S+.5W, >=2/3 strict wins over previous locally selected reference; actual config will include prior reference and dependencies before new joint-MF metrics",
+  "external_feedback": "Through round07, best private .37018. No round08 metrics or external result has determined these joint-MF parameters.",
+  "new_joint_quality_metrics_computed": false
+}

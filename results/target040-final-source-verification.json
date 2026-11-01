@@ -1,0 +1,524 @@
+{
+  "scope": "Synthetic correctness fixtures only; no real target040 quality claims",
+  "performed_by": "Codex automated runner, not author personal checks",
+  "timestamp_utc": "2026-11-01T15:31:13.968148+00:00",
+  "tests_run": 105,
+  "passed": true,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "wall_seconds": 8.114890417,
+  "source_hashes": {
+    "config/calendar-boundaries.json": "a3476c2d8ffb0a46d02f795fab3b1de1ee4d2a06180f3c18e7e5e440f9fce148",
+    "config/improvement-v2.json": "3732702a81605b0dab96cdf853904e716cbb3b9eb431d71af26338f27e8d7455",
+    "config/improvement-v3.json": "f57fa9d65e4f3f255af92257b1a48d46d62bb173fd73091ea57ee58493d89774",
+    "config/target040-portfolio01.json": "db6615371c3313c5f9fe9931439490aff345c8da9f20707a958185ed882adf1c",
+    "config/target040-portfolio02.json": "96499b0cfccaf8e8efd277500a1f5e4a58d3ad1c393bf56bed5b51a544363dc2",
+    "config/target040-portfolio03.json": "583d52c000e0a646d31de21ab91c2bffcfd9a120935e28e5ab0ee5ce70261753",
+    "config/target040-portfolio04.json": "f3814c31e71b03b0e56c36ffea19e0348df13cbfae4191e7618cc3544ec5e451",
+    "config/target040-portfolio05.json": "7b1939da2fb7f69add8d273618d26f8ad5561074640f8b518f074a69e65eadf8",
+    "config/target040-portfolio06.json": "a1116c984645cdfa74b92b24abe1c0607bcce16977049c4ec184dd8a5e333593",
+    "config/target040-round01.json": "6634025c4db35a54303b8580891a279ee3fb06dc259de1930e3fb40475f4dda4",
+    "config/target040-round02.json": "aa1c1aa5bfa1dafb0a57ed749847144412529a84eb37979f5e54bb1e4a508bae",
+    "config/target040-round03.json": "03922b57082e3a23ce7df023939b6a7ec31cfeed145a9c08f894060a8ef9ca58",
+    "config/target040-round04.json": "7e2bb424a75a59b5e0f200dcb5b3a1e3ffc00a053f7aadde7688f2949d2d51d0",
+    "config/target040-round05-preparation.json": "90b972f911ad0488b064165f563729b7fe0d8b11fd6ce08ad07ad8351b87d508",
+    "config/target040-round05.json": "f4f319e4be7274faa4d2fb67ac73a3e980bf7f3bd6f76e3957ab0c7deb75bbaf",
+    "config/target040-round06-plan.json": "51e6aaa6250794be7dec29373eaa2e8929d66cdbd16cc378d64ad06daf4394f3",
+    "config/target040-round06.json": "c60bdb13039d69505d0d4b4f9b9a0c6031b25de0c1ec4922685308a691776a6f",
+    "config/target040-round07.json": "e1be879436b05efcde8111f18fa54cdb4d70cd8ac110adf7e80ea7249d7f1673",
+    "config/target040-round08.json": "d2db332a1cd61432b5230421bc223863fa482324f81988af1bee597c70395e8d",
+    "config/target040-round09.json": "10c170bf59c7e5864d33954d742694ec3706d4e7ef1e339c6d785d6251274369",
+    "config/target040-round10.json": "c82604f4b77c5e04fb15dab9afa53613eaca78e5706e89cf3d27323cafc86402",
+    "config/target040-round11.json": "5f2bfd179d8a008567000e29111a44698aa2783b898375fe3e77241247f7aecf",
+    "pyproject.toml": "9adefc56aead621c420522bf25ba895a5ecb0cc5ec208bce05dcdb3449292226",
+    "requirements.lock": "fc30f88c94581794d8573d6b144a78333f98fde460baa95b9c591277e770023e",
+    "src/sweettv/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/sweettv/cli.py": "1afd5f7c785da8fee7bc81fc10eee600355e5918c564fcfc532700844b889698",
+    "src/sweettv/data.py": "fbd52982e8c5bfa1e1853c46bad97501c5b7c56645cb98128de10890855d0393",
+    "src/sweettv/improve.py": "ebb0b1eac4e4d7a9383626cd3d29b55bdbb2ee7d39f74aeeb5fb4fb7d2de36c6",
+    "src/sweettv/improve_v3.py": "8f95dbf75f179833a4096da7367577b4718f6f6fb9667f2db0dfcb858781b064",
+    "src/sweettv/improved_models.py": "ed3e31502ba50db94fb73d8742ca4c94228b87b51e9385972348222132340a27",
+    "src/sweettv/metrics.py": "632f38f6a2b120c23673ffd6afe98660785a4ddd738b124024790a8952b6b3da",
+    "src/sweettv/models.py": "8acf123ccef02b08386e3c03db287f684f11ad976572d0aade74f64340e4d947",
+    "src/sweettv/outputs.py": "23248dc49d2b8dce7208fad97a5df4a5c3dec21d12eeaf980c642c82a5db3790",
+    "src/sweettv/target040.py": "964254ed646bac1412144dc3662b95ff733bd869615522f13f38bd7ee0710324",
+    "src/sweettv/target040_cold.py": "e4c1ab5deb635c02a332b7aab250765cbe058355367b6098af756a7e6714afe0",
+    "src/sweettv/target040_inductive.py": "3feda198704c3b06a2e1eb0a1985be9156c17b327778c0d22a60a99ce319ae93",
+    "src/sweettv/target040_intensity.py": "dfeb723f00dfda5144e20dd5da4fcce34b49001b4e1c6c120404389941f38529",
+    "src/sweettv/target040_joint.py": "1b8d72f2f53a06d40fd758c0305fc617f0f682bf58a88ad32b1222dbea8645a8",
+    "src/sweettv/target040_models.py": "94290b68573471dfd2d92c47249558628e39a8819566246bb62f53676204e53a",
+    "src/sweettv/time_features.py": "8b58a602dc23b91012b17d4cb9618ec4f103a66aa93055f27679ec2f6379a856",
+    "src/sweettv/v3_context.py": "be5ee7f7452f4930cac3e2b8a8f87e41e76c90146952e29da5c56b0314bcc5d3",
+    "src/sweettv/v3_models.py": "b5d4fc9242d94b20b29ae6153331248e8c4a09107a77460bca5607caf7e00237",
+    "tests/test_cli.py": "ccf695e7115205f886471f7d643e3aed62563655d16cc30261dc80c41fa4a454",
+    "tests/test_improve.py": "42c709a0b98da18b82ed1ee1085f4203516b7c3a1010dc0a36951efc109fb5a0",
+    "tests/test_improve_v3.py": "5cfbcd3375ae3a9c795d14f268d159c2f8b6983f54afb424ed6516b87e303248",
+    "tests/test_improved_models.py": "beeefa6f7cc2ee1bf93c965cd24e051c0c65aee3f6fec09ecbf393bb86e1b327",
+    "tests/test_intervals.py": "c4df014a9d6e7d5dc375075082b2ef7be90fe87da64cc5a62130d0d76cf2df62",
+    "tests/test_metrics.py": "53ac5a69bc41757c7aed28eceaf198f624051361228553924c5c46d826be98e2",
+    "tests/test_models.py": "3e6fe22fdf8d848abc2013330e200f5d7988afc34551d802009eac801055afdf",
+    "tests/test_outputs.py": "8c5b12e7ed8fc0c719572e4ce12c8dedf374763b1802f109ecf34ff8443c8f5a",
+    "tests/test_pipeline_data.py": "05e571f6a98eb83fa78147736fdcc945695afc36d370cf5c03d726270a24e242",
+    "tests/test_target040.py": "8316df28d5fb06af80a9890b7e15eedd14853edd555e113eaa7cb31037fd272a",
+    "tests/test_target040_cold.py": "d0c7c676037a4b19ac951e3ab06b9daceb40655d928e5a40f5d5e331009599fb",
+    "tests/test_target040_inductive.py": "08eb4a8154fc2b07de24fe5d1b709677df41e0018bd8ce7504ab98a3c48b5913",
+    "tests/test_target040_intensity.py": "50a891e497e111734c0dd4a4c558754b7266c71191252a3e328afb9879e2cfb5",
+    "tests/test_time_features.py": "0193c08dac290cf2db19873ef5f9da3e00ded69d343ec05b7f9a0a0ea6c9fe73",
+    "tests/test_v3_context.py": "fe2b6cf87ccd88c7ade397aa0ee323d99e2ca5cc23f3c7fce90f778ecc62e440",
+    "tests/test_v3_models.py": "c1790cf6c28a05e924726dfec379e25db7cace3c8022c54eb451a32237d4a192",
+    "requirements-v3.lock": "36f853081ddac313c45ff358b3c5a32939d80c4d30654e41505a196153a6f4a0",
+    "scripts/prepare_improvement_v3.py": "3d4605d64d1f59738af6d1ba6a6580127926615576cb7a040044ecbb4f890a03"
+  },
+  "source_hashes_stable": true,
+  "environment": {
+    "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "cpu": "Apple M5",
+    "physical_memory_bytes": 17179869184,
+    "packages": {
+      "numpy": "2.0.2",
+      "pandas": "2.3.3",
+      "scipy": "1.13.1",
+      "scikit-learn": "1.6.1",
+      "pyarrow": "21.0.0",
+      "reportlab": "4.5.1",
+      "PyMuPDF": "1.26.5",
+      "requests": "2.32.5",
+      "kaggle": "1.7.4.5",
+      "playwright": "1.60.0",
+      "implicit": "0.7.3"
+    },
+    "threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": null
+    },
+    "sqlite": "3.51.0"
+  },
+  "tests": [
+    {
+      "test": "test_cli.CLIIntegrationTests.test_cli_calendar_config_handles_real_format_and_source_file_spillovers",
+      "status": "passed"
+    },
+    {
+      "test": "test_cli.CLIIntegrationTests.test_cli_refuses_to_overwrite_an_existing_run",
+      "status": "passed"
+    },
+    {
+      "test": "test_cli.CLIIntegrationTests.test_complete_cli_artifacts_submission_and_independent_ap_audit",
+      "status": "passed"
+    },
+    {
+      "test": "test_cli.CLIIntegrationTests.test_future_view_changes_do_not_change_preferences_ap_or_submission",
+      "status": "passed"
+    },
+    {
+      "test": "test_improve.ImprovementRunnerTests.test_complete_fourteen_method_freeze_selection_confirmation_and_new_final_file",
+      "status": "passed"
+    },
+    {
+      "test": "test_improve.ImprovementRunnerTests.test_recency_scale_checks_source_seconds_and_future_events",
+      "status": "passed"
+    },
+    {
+      "test": "test_improve.PreferredTargetTests.test_fewer_than_five_labels_and_malformed_user_ids",
+      "status": "passed"
+    },
+    {
+      "test": "test_improve.PreferredTargetTests.test_unique_programmes_aggregate_before_top5_with_id_ties_and_common_cohort",
+      "status": "passed"
+    },
+    {
+      "test": "test_improve_v3.RunnerTests.test_all16_on_three_synthetic_slices_refit_roundtrip_and_actual_exports",
+      "status": "passed"
+    },
+    {
+      "test": "test_improve_v3.SelectionTests.test_both_proxies_and_only_complete_methods_enter_selection",
+      "status": "passed"
+    },
+    {
+      "test": "test_improve_v3.SelectionTests.test_mean_gain_needs_two_strict_slice_wins_and_exact_ties_prefer_v2",
+      "status": "passed"
+    },
+    {
+      "test": "test_improve_v3.SelectionTests.test_native_retrieval_unions_have_frozen_250_and_300_bounds",
+      "status": "passed"
+    },
+    {
+      "test": "test_improved_models.SyntheticImprovedModelsTest.test_empty_and_invalid_configuration",
+      "status": "passed"
+    },
+    {
+      "test": "test_improved_models.SyntheticImprovedModelsTest.test_graph_unchanged_and_duration_seed_less_compressed",
+      "status": "passed"
+    },
+    {
+      "test": "test_improved_models.SyntheticImprovedModelsTest.test_scale_before_aggregation_and_power_never_changes_graph",
+      "status": "passed"
+    },
+    {
+      "test": "test_improved_models.SyntheticImprovedModelsTest.test_seconds_and_watches_preserve_different_personal_preference",
+      "status": "passed"
+    },
+    {
+      "test": "test_improved_models.SyntheticImprovedModelsTest.test_state_independent_of_dataframe_and_readonly_after_save",
+      "status": "passed"
+    },
+    {
+      "test": "test_improved_models.SyntheticImprovedModelsTest.test_ties_unique_valid_output_and_no_candidate_fitting",
+      "status": "passed"
+    },
+    {
+      "test": "test_improved_models.SyntheticImprovedModelsTest.test_walk_matches_independent_dense_stationary_solution",
+      "status": "passed"
+    },
+    {
+      "test": "test_improved_models.SyntheticImprovedModelsTest.test_zero_seeds_and_cold_users_share_original_fallback",
+      "status": "passed"
+    },
+    {
+      "test": "test_intervals.IntervalTests.test_adjacent_airings_stay_separate",
+      "status": "passed"
+    },
+    {
+      "test": "test_intervals.IntervalTests.test_channel_mismatch",
+      "status": "passed"
+    },
+    {
+      "test": "test_intervals.IntervalTests.test_conflicting_labels_and_zero",
+      "status": "passed"
+    },
+    {
+      "test": "test_intervals.IntervalTests.test_fragment_aggregation",
+      "status": "passed"
+    },
+    {
+      "test": "test_intervals.IntervalTests.test_half_open_and_multiple_airings",
+      "status": "passed"
+    },
+    {
+      "test": "test_intervals.IntervalTests.test_overlapping_views_and_duplicates",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.AveragePrecisionTests.test_assignment_hand_computed_examples",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.AveragePrecisionTests.test_duplicate_prediction_keeps_rank_but_gets_no_repeat_credit",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.AveragePrecisionTests.test_empty_labels_no_hits_or_empty_predictions",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.AveragePrecisionTests.test_fixed_cohort_includes_zero_history_and_explicit_empty_targets",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.AveragePrecisionTests.test_invalid_cohort_is_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.AveragePrecisionTests.test_labels_are_unique",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.AveragePrecisionTests.test_more_than_five_labels_uses_five_denominator",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.AveragePrecisionTests.test_predictions_truncate_at_five",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.ExportedAuditTests.test_audit_handles_duplicates_empty_labels_and_truncation",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.ExportedAuditTests.test_cohort_change_or_duplicate_fails",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.ExportedAuditTests.test_exact_fraction_and_saved_summary",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.ExportedAuditTests.test_saved_macro_mismatch_fails",
+      "status": "passed"
+    },
+    {
+      "test": "test_metrics.ExportedAuditTests.test_saved_user_ap_mismatch_fails",
+      "status": "passed"
+    },
+    {
+      "test": "test_models.SyntheticModelsTest.test_cold_fallback_identical_for_all_families",
+      "status": "passed"
+    },
+    {
+      "test": "test_models.SyntheticModelsTest.test_content_known_attribute_and_no_title_signal",
+      "status": "passed"
+    },
+    {
+      "test": "test_models.SyntheticModelsTest.test_empty_histories_are_supported",
+      "status": "passed"
+    },
+    {
+      "test": "test_models.SyntheticModelsTest.test_input_rejection_and_exact_string_users",
+      "status": "passed"
+    },
+    {
+      "test": "test_models.SyntheticModelsTest.test_missing_metadata_and_no_positive_candidate_fallback",
+      "status": "passed"
+    },
+    {
+      "test": "test_models.SyntheticModelsTest.test_person_tokens_split_before_whitespace_normalization",
+      "status": "passed"
+    },
+    {
+      "test": "test_models.SyntheticModelsTest.test_popularity_unique_viewers_and_deterministic_ties",
+      "status": "passed"
+    },
+    {
+      "test": "test_models.SyntheticModelsTest.test_ppr_conservation_convergence_and_training_graph",
+      "status": "passed"
+    },
+    {
+      "test": "test_models.SyntheticModelsTest.test_ppr_prunes_across_product_block_boundary",
+      "status": "passed"
+    },
+    {
+      "test": "test_models.SyntheticModelsTest.test_ppr_sparse_pruning_and_tie_break",
+      "status": "passed"
+    },
+    {
+      "test": "test_models.SyntheticModelsTest.test_saved_fitted_state_reproduces_lists",
+      "status": "passed"
+    },
+    {
+      "test": "test_outputs.SubmissionTests.test_ambiguous_template_and_duplicate_users_fail",
+      "status": "passed"
+    },
+    {
+      "test": "test_outputs.SubmissionTests.test_bom_is_preserved",
+      "status": "passed"
+    },
+    {
+      "test": "test_outputs.SubmissionTests.test_header_and_row_count_failures",
+      "status": "passed"
+    },
+    {
+      "test": "test_outputs.SubmissionTests.test_invalid_prediction_formats",
+      "status": "passed"
+    },
+    {
+      "test": "test_outputs.SubmissionTests.test_prediction_column_can_precede_user_column",
+      "status": "passed"
+    },
+    {
+      "test": "test_outputs.SubmissionTests.test_user_id_order_changes_and_numeric_conversion_fail",
+      "status": "passed"
+    },
+    {
+      "test": "test_outputs.SubmissionTests.test_writer_cannot_overwrite_original_template",
+      "status": "passed"
+    },
+    {
+      "test": "test_outputs.SubmissionTests.test_writer_preserves_raw_user_ids_order_headers_and_template",
+      "status": "passed"
+    },
+    {
+      "test": "test_outputs.SubmissionTests.test_writer_requires_complete_valid_recommendations",
+      "status": "passed"
+    },
+    {
+      "test": "test_pipeline_data.PipelineDataTests.test_actual_day_first_schedule_format_and_calendar_spillovers_do_not_leak",
+      "status": "passed"
+    },
+    {
+      "test": "test_pipeline_data.PipelineDataTests.test_actual_export_joins_fragments_without_duplicate_seconds",
+      "status": "passed"
+    },
+    {
+      "test": "test_pipeline_data.PipelineDataTests.test_boundary_clipping_and_future_views_are_excluded_from_preferences",
+      "status": "passed"
+    },
+    {
+      "test": "test_pipeline_data.PipelineDataTests.test_calendar_spillovers_require_explicit_boundaries_and_us_slash_dates_are_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_pipeline_data.PipelineDataTests.test_cold_validation_user_survives_actual_exports_and_fixed_cohort_evaluation",
+      "status": "passed"
+    },
+    {
+      "test": "test_pipeline_data.PipelineDataTests.test_import_infers_minutes_preserves_exact_ids_and_audits_duplicates",
+      "status": "passed"
+    },
+    {
+      "test": "test_pipeline_data.PipelineDataTests.test_nonfinite_declared_view_duration_is_rejected_during_import",
+      "status": "passed"
+    },
+    {
+      "test": "test_pipeline_data.PipelineDataTests.test_nonfinite_view_endpoints_are_already_rejected_during_import",
+      "status": "passed"
+    },
+    {
+      "test": "test_pipeline_data.PipelineDataTests.test_nonpositive_airings_are_not_candidates_or_metadata",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_all13_synthetic_cutoffs_cached_parity_refit_and_roundtrip",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_all16_count_mf_round_and_optional_resource_failure",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_all16_exposure_rate_round_cutoffs_refit_and_roundtrip",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_all16_full_pool_intensity_mixtures_fresh_and_independently_audited",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_all16_mixed_restart_round_cutoffs_refit_and_roundtrip",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_all23_cold_completion_methods_reused_graph_and_independent_exports",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_all23_inductive_mf_methods_and_known_factors_at_fresh_cutoffs",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_all28_engagement_methods_fresh_cutoffs_and_independent_audit",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_all31_transformed_implicit_inputs_independently_audited",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_all37_joint_and_squared_mf_objectives_independent_audit",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_count_mf_nonsquare_orientation_intensity_repeats_and_pickle",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_exposure_rate_by_hand_clipping_unknown_items_and_duplicate_airings",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_fixed_fusion_substitutes_channel_without_normalizing_missing_weights",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_hand_exposure_scores_cold_and_shape_checks",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_joint_paired_views_full_pool_normalization_orientation_and_pickle",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_late_recency_event_is_rejected_before_cached_model_reuse",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_mixed_restart_hand_values_and_dense_dangling_stationary_solution",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_new_cutoffs_fit_fresh_without_cached_fold_files",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040.OpportunityTests.test_selection_references_previous_best_history_not_v2",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040_cold.ColdCompletionTests.test_known_identity_cold_mass_alignment_subset_and_no_padding",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040_inductive.InductiveTests.test_dense_ridge_orientation_known_factor_identity_and_cold_prediction",
+      "status": "passed"
+    },
+    {
+      "test": "test_target040_intensity.IntensityTests.test_full_pool_normalization_missing_component_repeats_and_roundtrip",
+      "status": "passed"
+    },
+    {
+      "test": "test_time_features.TimeFeatureTests.test_conflicts_zero_ids_and_future_schedule_are_not_preferences",
+      "status": "passed"
+    },
+    {
+      "test": "test_time_features.TimeFeatureTests.test_cutoff_clips_before_threshold_and_later_views_do_not_change_early_profile",
+      "status": "passed"
+    },
+    {
+      "test": "test_time_features.TimeFeatureTests.test_decay_is_summed_per_accepted_airing_not_latest_item_timestamp",
+      "status": "passed"
+    },
+    {
+      "test": "test_time_features.TimeFeatureTests.test_exact_reference_parity_is_consumed_and_mismatch_fails",
+      "status": "passed"
+    },
+    {
+      "test": "test_time_features.TimeFeatureTests.test_fragment_union_threshold_and_one_half_life_by_hand",
+      "status": "passed"
+    },
+    {
+      "test": "test_time_features.TimeFeatureTests.test_threshold_is_per_canonical_airing_not_item_and_boundaries_are_half_open",
+      "status": "passed"
+    },
+    {
+      "test": "test_v3_context.ContextTests.test_actual_prepare_later_views_cannot_change_early_profile_or_graph",
+      "status": "passed"
+    },
+    {
+      "test": "test_v3_context.ContextTests.test_availability_duplicates_conflicts_duration_mean_and_unknown_channels",
+      "status": "passed"
+    },
+    {
+      "test": "test_v3_context.ContextTests.test_calendar_union_midnight_and_cutoff_by_hand",
+      "status": "passed"
+    },
+    {
+      "test": "test_v3_context.ContextTests.test_smoothing_uses_training_global_only_and_no_history_has_no_native_score",
+      "status": "passed"
+    },
+    {
+      "test": "test_v3_models.FusionTests.test_hand_ranks_fixed_weights_missing_components_and_id_ties",
+      "status": "passed"
+    },
+    {
+      "test": "test_v3_models.ModelTests.test_als_actual_orientation_repeat_flag_confidence_and_official_save_roundtrip",
+      "status": "passed"
+    },
+    {
+      "test": "test_v3_models.ModelTests.test_context_only_user_has_new_programmes_but_true_cold_fallback_matches_all16",
+      "status": "passed"
+    },
+    {
+      "test": "test_v3_models.ModelTests.test_original_models_are_identical_with_shared_training_graph_and_native_padding",
+      "status": "passed"
+    },
+    {
+      "test": "test_v3_models.ModelTests.test_two_distinct_graph_formulas_match_dense_matrices",
+      "status": "passed"
+    }
+  ],
+  "log_sha256": "a08937a399fa992e4afc1f1a14bcd0c7007cac6fe7c037c3e285ef3a4cf28c94",
+  "old_verification_overwritten": false
+}

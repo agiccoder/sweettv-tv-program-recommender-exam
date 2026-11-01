@@ -1,0 +1,26 @@
+{
+  "observed_utc": "2026-11-01T15:30:22.059140+00:00",
+  "submission": {
+    "id": 57875732,
+    "date": "2026-11-01T15:10:34.963Z",
+    "filename": "candidate.csv",
+    "description": "Хайрисламов Тимур | Kaggle khayrislamovtimur | target040 mfshare_rate_16_50 | sha256 8b722b51734d6b7d6b46be0b563afce424dbbf5214dd7e18170ca82152b9b7e1",
+    "status": "COMPLETE",
+    "public_score": "0.40643",
+    "private_score": "0.39000",
+    "total_bytes": 76280,
+    "submitted_by": "khayrislamovtimur"
+  },
+  "source_observation": "/Users/timur/Recsys/midterm-codex-package/evidence/target040-01/portfolio06-submissions/results.json",
+  "source_observation_sha256": "a03a504387b55e3dc8b2a072c81d9cad9870242628e95358092c47d12e0e960f",
+  "upload_receipt": "/Users/timur/Recsys/midterm-codex-package/evidence/target040-01/portfolio02-submissions/mfshare_rate_16_50/upload-receipt.json",
+  "upload_receipt_sha256": "3c8f518c10e42163df4fdd947f24b108c0ab12126778a47276c889b70a13f1c8",
+  "candidate_sha256": "8b722b51734d6b7d6b46be0b563afce424dbbf5214dd7e18170ca82152b9b7e1",
+  "server_download_sha256": "8b722b51734d6b7d6b46be0b563afce424dbbf5214dd7e18170ca82152b9b7e1",
+  "server_and_local_bytes_identical": true,
+  "model_run": "/Users/timur/Recsys/midterm-codex-package/experiments/target040-portfolio02-20261101-01/candidates/mfshare_rate_16_50",
+  "model_sha256": "87efcd9a5ab71041b5feb50f8375ea61c3852138878a167b9edab1ebb61adf8a",
+  "convenience_csv": "/Users/timur/Recsys/midterm-codex-package/submission_target040_best_039000.csv",
+  "goal_040_reached": false,
+  "evidence_kind": "Authenticated own-account real Kaggle API, not a fabricated webpage or Submissions-page screenshot"
+}

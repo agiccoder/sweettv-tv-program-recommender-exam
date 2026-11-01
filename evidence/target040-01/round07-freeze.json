@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-11-01T13:51:02.820751+00:00",
+  "config_path": "config/target040-round07.json",
+  "sha256": "e1be879436b05efcde8111f18fa54cdb4d70cd8ac110adf7e80ea7249d7f1673",
+  "finite_methods": 28,
+  "new_round_quality_metrics_computed": false,
+  "training_features_hashes_frozen": true,
+  "hypothesis": "Finite five-signal engagement ablation: capped10/30min, fraction, distinct active days, recent10min cap. Each auxiliary history, PPR and the same fixed availability/MF wrappers; no joint weight tuning."
+}

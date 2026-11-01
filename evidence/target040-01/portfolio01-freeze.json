@@ -1,0 +1,41 @@
+{
+  "frozen_utc": "2026-11-01T14:51:39.101067+00:00",
+  "config_path": "config/target040-portfolio01.json",
+  "sha256": "db6615371c3313c5f9fe9931439490aff345c8da9f20707a958185ed882adf1c",
+  "finite_candidates": 27,
+  "candidate_order": [
+    "rrf_ppr_nmf32_25",
+    "rrf_ppr_nmf32_10",
+    "rrf_ppr_nmf16_25",
+    "rrf_history_nmf16_25",
+    "rrf_history_nmf32_25",
+    "count_nmf32",
+    "count_nmf64",
+    "ppr_mix_w_100",
+    "ppr_mix_w_75",
+    "ppr_mix_rw_100",
+    "ppr_mix_rw_50",
+    "rrf_ppr_watches_75",
+    "rate_mix_seconds_100",
+    "rate_mix_airings_50",
+    "rate_v2_seconds_50",
+    "rate_v2_seconds_100",
+    "history_rate_airings",
+    "eng_rrf_capped1800",
+    "eng_rrf_capped600",
+    "eng_rrf_active_days",
+    "eng_rate_recent_capped600",
+    "eng_rate_capped1800",
+    "ind_mf_a1_c100",
+    "ind_mf_a10_c100",
+    "history_seconds",
+    "history_recent_watches",
+    "hybrid_opportunity_total_70_20_10"
+  ],
+  "new_portfolio_scores_observed": false,
+  "actual_live_quota": {
+    "numToday": 5,
+    "numAllowedNow": 95
+  },
+  "authorization": "User requested many more submissions within about1h; user100/day statement confirmed by official live limits endpoint."
+}

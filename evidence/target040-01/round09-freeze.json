@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-11-01T14:56:29.715415+00:00",
+  "config_path": "config/target040-round09.json",
+  "sha256": "10c170bf59c7e5864d33954d742694ec3706d4e7ef1e339c6d785d6251274369",
+  "finite_methods": 23,
+  "new_round_quality_metrics_computed": false,
+  "diagnosis": "evidence/target040-01/round08-fusion-support-diagnosis.json",
+  "joint_MF_plan_deferred_without_execution": "Existing round09-joint-mf-plan-freeze.json remains unchanged and will be used in a later separately frozen round; priority changed because current RRF structurally blocks cold candidates."
+}

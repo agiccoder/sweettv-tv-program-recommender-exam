@@ -1,0 +1,10 @@
+{
+  "event": "round06_methods_windows_frozen",
+  "frozen_utc": "2026-11-01T13:29:55.816050+00:00",
+  "config_path": "config/target040-round06-plan.json",
+  "sha256": "51e6aaa6250794be7dec29373eaa2e8929d66cdbd16cc378d64ad06daf4394f3",
+  "finite_methods": 16,
+  "new_round_quality_metrics_computed": false,
+  "round05_quality_metrics_computed": false,
+  "hypothesis": "Existing native top1/top2 intensity ratios are1.36\u20131.60, but RRF compresses these to62/61. Retaining relative intensity may improve familiar-programme ordering."
+}

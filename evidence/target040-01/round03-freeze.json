@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-11-01T13:08:01.195254+00:00",
+  "config_path": "config/target040-round03.json",
+  "sha256": "03922b57082e3a23ce7df023939b6a7ec31cfeed145a9c08f894060a8ef9ca58",
+  "finite_methods": 16,
+  "new_round_quality_metrics_computed": false,
+  "diagnosis": "evidence/target040-01/exposure-rate-diagnosis.json",
+  "external_feedback_disclosure": "Round02 locally selected candidate returned private .35452, below already verified v3 .36630. Rate features and error diagnosis were prepared separately; parameter choices and local objective do not optimize returned scores."
+}

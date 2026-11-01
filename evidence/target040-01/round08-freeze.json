@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-11-01T13:59:23.203646+00:00",
+  "config_path": "config/target040-round08.json",
+  "sha256": "d2db332a1cd61432b5230421bc223863fa482324f81988af1bee597c70395e8d",
+  "finite_methods": 23,
+  "new_round_quality_metrics_computed": false,
+  "schedule_descriptor_hashes_frozen": true,
+  "hypothesis": "Finite inductive-MF support ablation: historical schedule regression to fixed MF16 item factors, cold factor shrinkage, unchanged known factors and two already evaluated fixed PPR parents."
+}

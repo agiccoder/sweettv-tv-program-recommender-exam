@@ -1,0 +1,7 @@
+{
+  "frozen_utc": "2026-11-01T13:38:44.264052+00:00",
+  "source": "scripts/prepare_target040_engagement.py",
+  "source_sha256": "23a5277d646eb9d555b52dc3addcd693a75bb94ab9a9c8723b134afe6331ce6a",
+  "hand_check": "evidence/target040-01/engagement-hand-check.json",
+  "quality_metrics_computed": false
+}

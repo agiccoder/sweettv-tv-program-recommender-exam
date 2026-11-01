@@ -1,0 +1,12 @@
+{
+  "frozen_utc": "2026-11-01T13:55:17.043044+00:00",
+  "scope": "Training-only schedule descriptors for inductive implicit-MF candidate support; feature preparation, no quality metrics",
+  "windows_source": "config/target040-round05-preparation.json",
+  "windows_source_sha256": "90b972f911ad0488b064165f563729b7fe0d8b11fd6ce08ad07ad8351b87d508",
+  "history_items": "All distinct positive accepted training interaction IDs, exact sorted order, separately per cutoff",
+  "features": "Deduplicated nonconflicting historical broadcast hours per training day in training-channel \u00d7 weekday \u00d74h slots; future target descriptors use the same fixed training-channel vocabulary and allowed availability only",
+  "existing_target_availability": "Reuse exact audited future availability matrices and airtime totals, no future viewing or content metadata",
+  "hypothesis": "All current PPR/MF variants have no learned score for globally unseen future programmes. Map training-only MF item factors from permitted historical schedule descriptors, then project target-only items using availability. Known factors unchanged.",
+  "source_comparison": "Independent historical broadcast totals must match previously frozen exposure features for every training item",
+  "next_requirement": "Freeze finite model/projection settings and selection rule before computing any new quality metrics; primary Ridge1.6.1 API already read."
+}

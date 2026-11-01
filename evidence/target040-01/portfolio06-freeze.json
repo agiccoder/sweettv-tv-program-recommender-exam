@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-11-01T15:18:32.910477+00:00",
+  "config_path": "config/target040-portfolio06.json",
+  "sha256": "a1116c984645cdfa74b92b24abe1c0607bcce16977049c4ec184dd8a5e333593",
+  "finite_methods": 1,
+  "new_quality_metrics_computed": false,
+  "initial_frozen_bytes": "evidence/target040-01/portfolio06-frozen-config.txt",
+  "hypothesis": "Single already evaluated joint-MF count head omitted from portfolio03 positional list; reuse exactly the same fully fitted component, no new parameters."
+}

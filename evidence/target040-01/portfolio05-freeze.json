@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-11-01T15:15:47.163623+00:00",
+  "config_path": "config/target040-portfolio05.json",
+  "sha256": "7b1939da2fb7f69add8d273618d26f8ad5561074640f8b518f074a69e65eadf8",
+  "finite_methods": 3,
+  "new_quality_metrics_computed": false,
+  "initial_frozen_bytes": "evidence/target040-01/portfolio05-frozen-config.txt",
+  "copy_policy": "Copy identical bytes to config directory after current source-stable rounds finish, before future inference.",
+  "hypothesis": "Three previously evaluated complete-pool intensity mixtures, alternative normalization to reciprocal ranks, using at most the residual live quota after portfolios03/04."
+}

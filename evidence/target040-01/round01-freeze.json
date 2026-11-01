@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-11-01T12:50:27.544066+00:00",
+  "config_path": "config/target040-round01.json",
+  "sha256": "6634025c4db35a54303b8580891a279ee3fb06dc259de1930e3fb40475f4dda4",
+  "new_round_quality_metrics_computed": false,
+  "diagnosis": "evidence/target040-01/round01-diagnosis.json",
+  "finite_methods": 13,
+  "same_previously_inspected_overlapping_folds": true
+}

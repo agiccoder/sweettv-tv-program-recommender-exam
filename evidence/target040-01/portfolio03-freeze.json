@@ -1,0 +1,8 @@
+{
+  "frozen_utc": "2026-11-01T15:11:04.997143+00:00",
+  "config_path": "config/target040-portfolio03.json",
+  "sha256": "583d52c000e0a646d31de21ab91c2bffcfd9a120935e28e5ab0ee5ce70261753",
+  "finite_methods": 24,
+  "new_quality_metrics_computed": false,
+  "hypothesis": "Finite implicit-MF objective ablation: shared count/duration KL factors and head-sensitive squared count-intensity reconstruction, ranks32/64 inherited, same fixed PPR/MF fusion."
+}
